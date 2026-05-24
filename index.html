@@ -23,6 +23,13 @@
             src: url('dumbledor.ttf') format('truetype');
         }
 
+        @font-face {
+            font-family: 'GermaniaOne';
+            src: url('GermaniaOne-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -90,6 +97,8 @@
             background-size: auto;
             background-color: #fff;
             border-right: 1px solid #e3e3e3;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
             padding: 2rem 1.5rem;
             position: sticky;
             top: 0;
@@ -103,6 +112,13 @@
             font-size: 1.5rem;
             color: #2e2d42;
             font-weight: 700;
+        }
+
+        .difficulty-text {
+            font-family: 'GermaniaOne', 'Dumbledor', serif;
+            font-size: 1rem;
+            display: inline-block;
+            margin-left: 0.35rem;
         }
 
         .toc-list {
@@ -339,10 +355,11 @@
 
         .badge {
             display: inline-block;
-            padding: 0.35rem;
+            padding: 0.5rem 1rem 0.5rem 1rem;
             border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
+            font-size: 1rem;
+            font-weight: 500;
+            font-family: 'GermaniaOne', 'Dumbledor', sans-serif;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
@@ -652,14 +669,17 @@
 
         .stat-badge.beginner {
             background-color: #d4c4b0;
+            font-family: 'GermaniaOne';
         }
 
         .stat-badge.intermediate {
             background-color: #dbcd0b;
+            font-family: 'GermaniaOne';
         }
 
         .stat-badge.expert {
             background-color: #c6130f;
+            font-family: 'GermaniaOne';
         }
     </style>
 </head>
@@ -678,15 +698,15 @@
             <div class="stats-section">
                 <div class="stat-item">
                     <span class="stat-badge beginner"></span>
-                    <span><strong id="beginnerCount">0</strong> Beginner</span>
+                    <span><strong id="beginnerCount">0</strong> <span class="difficulty-text">Beginner</span></span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-badge intermediate"></span>
-                    <span><strong id="intermediateCount">0</strong> Intermediate</span>
+                    <span><strong id="intermediateCount">0</strong> <span class="difficulty-text">Intermediate</span></span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-badge expert"></span>
-                    <span><strong id="expertCount">0</strong> Expert</span>
+                    <span><strong id="expertCount">0</strong> <span class="difficulty-text">Expert</span></span>
                 </div>
             </div>
 
