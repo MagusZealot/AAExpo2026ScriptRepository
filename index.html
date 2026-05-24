@@ -32,6 +32,11 @@
         html, body {
             height: 100%;
             background-color: #fbf8f3;
+            /* Page background texture (tiled) */
+            background-image: url('background-texture.png');
+            background-repeat: repeat;
+            background-size: auto;
+            background-attachment: fixed;
             color: #2e2d42;
             font-family: 'Inter', sans-serif;
             font-weight: 400;
@@ -56,7 +61,7 @@
         }
 
         header h1 {
-            font-family: 'Dumbledor', serif;
+            font-family: 'Germania One', serif;
             font-size: 3rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
@@ -79,7 +84,11 @@
         /* Sidebar / Table of Contents */
         .sidebar {
             width: 280px;
-            background: #fff;
+            /* TOC background tile */
+            background-image: url('tile-texture.png');
+            background-repeat: repeat;
+            background-size: auto;
+            background-color: #fff;
             border-right: 1px solid #e3e3e3;
             padding: 2rem 1.5rem;
             position: sticky;
@@ -92,7 +101,6 @@
         .sidebar h3 {
             font-family: 'Dumbledor', serif;
             font-size: 1.5rem;
-            margin-bottom: 1.5rem;
             color: #2e2d42;
             font-weight: 700;
         }
@@ -110,7 +118,8 @@
             padding: 0.5rem 0.75rem;
             border-radius: 4px;
             transition: all 0.2s ease;
-            font-size: 0.95rem;
+            font-size: 1.3rem;
+            font-family: 'Dumbledor', serif;
             border-left: 3px solid transparent;
             color: #2e2d42;
         }
@@ -130,11 +139,17 @@
         /* Search Bar */
         .search-container {
             margin-bottom: 2.5rem;
-            background: #fff;
+            /* Search background texture */
+            background-image: url('tile-texture.png');
+            background-repeat: repeat;
+            background-size: auto;
+            background-color: #fff;
             padding: 1.5rem;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
             border: 1px solid #e3e3e3;
+            font-family: 'Dumbledor', serif;
+            font-size: 1rem;
         }
 
         .search-container label {
@@ -142,7 +157,7 @@
             font-weight: 600;
             margin-bottom: 0.75rem;
             color: #2e2d42;
-            font-size: 0.95rem;
+            font-size: 1.3rem;
         }
 
         #searchInput {
@@ -150,7 +165,7 @@
             padding: 0.75rem 1rem;
             border: 1px solid #d3d3d3;
             border-radius: 6px;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Dumbledor', serif;
             font-size: 1rem;
             transition: all 0.2s ease;
             background-color: #fbf8f3;
@@ -164,10 +179,11 @@
         }
 
         .search-hint {
-            font-size: 0.85rem;
+            font-size: 1rem;
             color: #999;
             margin-top: 0.5rem;
             font-style: italic;
+            font-family: 'Dumbledor', serif;
         }
 
         /* Scripts Grid */
@@ -180,7 +196,11 @@
 
         /* Script Card */
         .script-card {
-            background: #fff;
+            /* Entry tile texture */
+            background-image: url('tile-texture.png');
+            background-repeat: repeat;
+            background-size: auto;
+            background-color: #fff;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -197,16 +217,16 @@
         }
 
         .card-header {
-            padding: 1.5rem 1.5rem 1rem;
-            border-bottom: 2px solid #f0e5d8;
+            padding: 1.5rem 1.5rem 0.5rem;
+            border-bottom: none;
         }
 
         .card-title {
             font-family: 'Dumbledor', serif;
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             font-weight: 700;
             color: #2e2d42;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.25rem;
             word-break: break-word;
         }
 
@@ -228,12 +248,12 @@
             gap: 1rem;
             flex-wrap: wrap;
             align-items: center;
-            margin-bottom: 0.5rem;
+            /* margin-bottom: 0.5rem; */
         }
 
         .badge {
             display: inline-block;
-            padding: 0.35rem 0.75rem;
+            padding: 0.35rem;
             border-radius: 20px;
             font-size: 0.8rem;
             font-weight: 600;
@@ -248,14 +268,14 @@
         }
 
         .badge.intermediate {
-            background-color: #fce4c0;
-            color: #8b5e0d;
-            border: 1px solid #f7930e;
+            background-color: #ffe1b9;
+            color: #644100;
+            border: 1px solid #c2812c;
         }
 
         .badge.expert {
             background-color: #c6130f;
-            color: #d4a89f;
+            color: #ffe5e0;
             border: 1px solid #d4a89f;
         }
 
@@ -266,7 +286,7 @@
         }
 
         .card-body {
-            padding: 1.5rem;
+            padding: 0 1.5rem 1.5rem 1.5rem;
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -290,8 +310,9 @@
             color: #999;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.25rem;
             display: block;
+            font-family: 'Dumbledor', serif;
         }
 
         .characters-list {
@@ -306,10 +327,11 @@
             color: #2e2d42;
             padding: 0.4rem 0.7rem;
             border-radius: 4px;
-            font-size: 0.85rem;
+            font-size: 1.2rem;
             font-weight: 500;
             border: 1px solid #d4c4b0;
             transition: all 0.18s ease;
+            font-family: 'Dumbledor', serif;
         }
 
         .character-tag-link {
@@ -327,9 +349,9 @@
 
         /* Special Rules Callout */
         .rules-section {
-            margin-top: auto;
-            padding-top: 1rem;
-            border-top: 1px solid #f0e5d8;
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none;
         }
 
         .rules-label {
@@ -338,8 +360,9 @@
             color: #999;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.25rem;
             display: block;
+            font-family: 'Dumbledor', serif;
         }
 
         .rules-callout {
@@ -401,7 +424,7 @@
                 position: relative;
                 top: auto;
                 border-right: none;
-                border-bottom: 1px solid #e3e3e3;
+                /* border-bottom: 1px solid #e3e3e3; */
                 padding: 1.5rem;
             }
 
@@ -470,7 +493,7 @@
             }
 
             .card-header {
-                padding: 1rem 1rem 0.75rem;
+                padding: 1rem 1rem 0.4rem;
             }
 
             .card-body {
@@ -506,9 +529,25 @@
 
         /* Difficulty Count Stats */
         .stats-section {
-            margin-bottom: 1.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid #e3e3e3;
+            display: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .stat-divider {
+            width: 100%;
+            margin: 0.25rem 0 0.5rem 0;
+        }
+
+        .divider-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .divider-wrapper {
+            margin: 0.15rem 0 0.25rem 0;
         }
 
         .stat-item {
@@ -530,7 +569,7 @@
         }
 
         .stat-badge.intermediate {
-            background-color: #fce4c0;
+            background-color: #dbcd0b;
         }
 
         .stat-badge.expert {
@@ -541,7 +580,7 @@
 <body>
     <!-- Header -->
     <header>
-        <h1>Clocktower Manila All Aboard Expo 2026 Script Repository</h1>
+        <h1>Clocktower Manila Script Repository</h1>
     </header>
 
     <!-- Main Container -->
@@ -563,6 +602,10 @@
                     <span class="stat-badge expert"></span>
                     <span><strong id="expertCount">0</strong> Expert</span>
                 </div>
+            </div>
+
+            <div class="stat-divider" aria-hidden="true">
+                <img src="divider.png" alt="" class="divider-img">
             </div>
 
             <ul class="toc-list" id="tocList">
@@ -894,6 +937,9 @@
                     </div>
 
                     <div class="card-body">
+                        <div class="divider-wrapper">
+                            <img src="divider.png" alt="" class="divider-img">
+                        </div>
                         <p class="description">${formatWithStrong(script.description)}</p>
 
                         <div class="characters-section">
@@ -906,6 +952,9 @@
                         </div>
 
                         ${script.specialRules ? `
+                        <div class="divider-wrapper">
+                            <img src="divider.png" alt="" class="divider-img">
+                        </div>
                         <div class="rules-section">
                             <span class="rules-label">Special Rules</span>
                             <div class="rules-callout">
