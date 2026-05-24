@@ -63,7 +63,7 @@
         header h1 {
             font-family: 'Germania One', serif;
             font-size: 3rem;
-            font-weight: 700;
+            font-weight: 500;
             margin-bottom: 0.5rem;
             letter-spacing: -0.5px;
         }
@@ -128,6 +128,92 @@
             background-color: #f0e5d8;
             border-left-color: #f7930e;
             color: #2e2d42;
+        }
+
+        /* TOC collapse/expand */
+        .toc-toggle-header {
+            cursor: pointer;
+            user-select: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.5rem;
+        }
+
+        .toggle-icon {
+            display: inline-block;
+            transition: transform 0.3s ease;
+            font-size: 0.9rem;
+            line-height: 1;
+        }
+
+        .toc-wrapper {
+            max-height: 2000px;
+            transform: scaleY(1);
+            transform-origin: top;
+            transition: max-height 0.5s ease-in-out, opacity 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+            opacity: 1;
+            overflow: hidden;
+        }
+
+        .toc-wrapper.collapsed {
+            max-height: 0;
+            opacity: 0;
+            transform: scaleY(0);
+        }
+
+        .toc-toggle-header.collapsed .toggle-icon {
+            transform: rotate(-90deg);
+        }
+
+        /* Sidebar collapse (vertical/unfurl) */
+        .sidebar {
+            transition: max-height 0.45s cubic-bezier(0.25, 1, 0.5, 1), padding 0.35s ease;
+            max-height: 100vh;
+        }
+
+        /* Preserve scrolling when expanded, hide overflow only when collapsed */
+        .sidebar:not(.collapsed) {
+            overflow-y: auto;
+        }
+
+        .sidebar.collapsed {
+            /* Only keep the header visible when collapsed; preserve horizontal margins */
+            max-height: 3.6rem;
+            padding-top: 0.6rem;
+            padding-bottom: 0.6rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            overflow: hidden;
+        }
+
+        /* When collapsed, visually hide TOC contents but keep header visible */
+        .sidebar.collapsed .toc-wrapper {
+            max-height: 0;
+            opacity: 0;
+            transform: scaleY(0);
+            pointer-events: none;
+        }
+
+        .sidebar.collapsed .stat-divider,
+        .sidebar.collapsed .stats-section {
+            display: none;
+        }
+
+        .sidebar.collapsed .toc-toggle-header {
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.5rem;
+            width: 100%;
+        }
+
+        .sidebar.collapsed .toc-toggle-header .toggle-icon {
+            transform: rotate(-90deg);
+            margin-left: auto;
+        }
+
+        .sidebar.collapsed .toc-list a {
+            display: none;
         }
 
         /* Main Content */
@@ -223,7 +309,7 @@
 
         .card-title {
             font-family: 'Dumbledor', serif;
-            font-size: 1.5rem;
+            font-size: 2rem;
             font-weight: 700;
             color: #2e2d42;
             margin-bottom: 0.25rem;
@@ -587,7 +673,7 @@
     <div class="container">
         <!-- Sidebar / Table of Contents -->
         <aside class="sidebar">
-            <h3>Contents</h3>
+            <h3 id="tocToggle" class="toc-toggle-header" aria-expanded="true">Contents <span class="toggle-icon">▼</span></h3>
             
             <div class="stats-section">
                 <div class="stat-item">
@@ -608,9 +694,11 @@
                 <img src="divider.png" alt="" class="divider-img">
             </div>
 
-            <ul class="toc-list" id="tocList">
-                <!-- Generated dynamically -->
-            </ul>
+            <div id="tocWrapper" class="toc-wrapper">
+                <ul class="toc-list" id="tocList">
+                    <!-- Generated dynamically -->
+                </ul>
+            </div>
         </aside>
 
         <!-- Main Content -->
@@ -636,7 +724,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Clocktower Manila All Aboard Expo 2026 Scripts Repository</p>
+        <p>&copy; 2026 Clocktower Manila Scripts Repository</p>
     </footer>
 
     <script>
@@ -696,7 +784,7 @@
     "link": "https://script.bloodontheclocktower.com/?script=H4sIAAAAAAAACiWPQU7FMAxEr%2FI1C1Y5wb8BOyQQG4SQf2oS0yT%2BcpwWgbg7SrvzaMZ%2B47dfyIIrPio7IYCGZzVc8ZL58kRt4apNRr08tu7iwxkBjSrjimeO3i8Pl1fRwt7xFxCLxrXSyoaA3mjlmMnqISt55kouUaghYDGm0%2FksurMlsYIA171Fk8NQo1gmsdNGzefAVLsb946Ae5aiXe%2F5CJO59Jn5GimVswGlY3tn9sxk013L8B8E3MhuZ6%2Fh5%2B1dPGYERDZuuo0DIZ4pIYA3Kb7LLN50oZ5FELBJUqs6yVOpuX7Ph6ilNPD%2BDxvt5BNeAQAA"
   },
   {
-    "title": "Drunks, Deaths, and Diplomacy",
+    "title": "Drunks, Deaths, & Diplomacy",
     "difficulty": "Intermediate",
     "author": "Midnight",
     "description": "An alternative introduction to **Bad Moon Rising** and its mechanics: multiple night deaths and protection from night and day deaths. When multiple players die at night, is it due to the ravenous **Po**? Or is it just a sneaky **Imp** hiding behind its Minions?",
@@ -705,7 +793,7 @@
     "link": "https://script.bloodontheclocktower.com/?script=H4sIAAAAAAAACjWOQW7EIAxFrxJ5zQmyzrYnqKqRA55gBUyEnbRR1btXZjQ7g%2F5%2F73%2F%2BAieY4VHJEALgabl1mOGDk%2FCWDQIIVoIZln7KrmFaCC1rmFDStPBRWsV4w1%2BA%2FV2ImZ4QgOUiNd7QWocAilzGUZvsroq9reh5%2Bmk9sg6XI77RYq4oXip4k5c6XiQ70TFeRlgw3Q7De0APjPx8MdbTykglXzyETWLmkl4rxEMqbDF7iC4uiulqEY18lyqqstu3tpZxVFSjXlkcsWJv%2Fsn1cHGDr3%2FvNjVzRgEAAA%3D%3D"
   },
   {
-    "title": "Murders and Misinformation",
+    "title": "Murders & Misinformation",
     "difficulty": "Intermediate",
     "author": "Midnight",
     "description": "An alternative intro script to **Sects and Violets** with its varying degrees of misinformation. This script has the same strategy for Evil players in mind with **Sects & Violets**: pick off the important and trusted Good players before they figure out the correct demon type. The Good team must use strong binary information to deduce who and what the Demon is.",
@@ -881,6 +969,8 @@
         const searchInput = document.getElementById('searchInput');
         const scriptsGrid = document.getElementById('scriptsGrid');
         const tocList = document.getElementById('tocList');
+        const tocToggle = document.getElementById('tocToggle');
+        const tocWrapper = document.getElementById('tocWrapper');
         const beginnerCount = document.getElementById('beginnerCount');
         const intermediateCount = document.getElementById('intermediateCount');
         const expertCount = document.getElementById('expertCount');
@@ -891,6 +981,7 @@
             renderScripts(scriptsData);
             populateTOC();
             setupSearch();
+            setupSidebarToggle();
         }
 
         // Update difficulty counts
@@ -1001,6 +1092,24 @@
                 const searchTerm = e.target.value.toLowerCase().trim();
                 const filtered = filterScripts(searchTerm);
                 renderScripts(filtered);
+            });
+        }
+
+        // Setup collapsible TOC in the sidebar
+        function setupSidebarToggle() {
+            if (!tocToggle || !tocWrapper) return;
+
+            const sidebar = document.querySelector('.sidebar');
+
+            // Ensure ARIA state is set
+            tocToggle.setAttribute('role', 'button');
+            tocToggle.setAttribute('aria-expanded', String(!tocToggle.classList.contains('collapsed')));
+
+            tocToggle.addEventListener('click', () => {
+                const isCollapsed = tocToggle.classList.toggle('collapsed');
+                tocWrapper.classList.toggle('collapsed');
+                if (sidebar) sidebar.classList.toggle('collapsed');
+                tocToggle.setAttribute('aria-expanded', String(!isCollapsed));
             });
         }
 
