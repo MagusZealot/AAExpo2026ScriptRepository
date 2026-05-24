@@ -1,23 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Blood on the Clocktower Script Repository - Browse and filter custom scripts for the game.">
-    <meta name="theme-color" content="#2e2d42">
-    <title>Clocktower Manila All Aboard Expo 2026 - Script Repository</title>
-    <link rel="icon" type="image/png" href="bakunawa%20on%20the%20clocktower%20v3_recolor_orange.png">
-    <link rel="apple-touch-icon" href="bakunawa%20on%20the%20clocktower%20v3_recolor_orange.png">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    
     <style>
-        :root {
-            --accent-underline: #f7930e;
-        }
-
         @font-face {
             font-family: 'Dumbledor';
             src: url('dumbledor.ttf') format('truetype');
@@ -62,9 +46,19 @@
             background: linear-gradient(135deg, #2e2d42 0%, #3d3c51 100%);
             color: #fbf8f3;
             padding: 2.5rem 2rem;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
             border-bottom: 3px solid #f7930e;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        header .site-logo {
+            width: 64px;
+            height: 64px;
+            object-fit: contain;
+            flex: 0 0 auto;
         }
 
         header h1 {
@@ -340,9 +334,7 @@
 
         .card-title-link:hover {
             color: #f7930e;
-            text-decoration: underline;
-            text-decoration-thickness: 2px;
-            text-underline-offset: 4px;
+            text-decoration: none;
         }
 
         .card-meta {
@@ -686,6 +678,7 @@
 <body>
     <!-- Header -->
     <header>
+        <img src="bakunawa%20on%20the%20clocktower%20v3_recolor_orange.png" alt="Logo" class="site-logo">
         <h1>Clocktower Manila Script Repository</h1>
     </header>
 
@@ -762,7 +755,7 @@
     "title": "Everyone Can Play",
     "difficulty": "Beginner",
     "author": "Ben Burns",
-    "description": "An alternative version of **Trouble Brewing** from former TPI Community Manager Ben Burns. This script lightly introduces additional deaths (**Gambler, Assassin**) and surviving an execution (**Fool, Devil's Advocate**) while emphasizing the key question of: Which Minions are in play? Determine the identity of the **Imp** in the midst of wild risky plays.",
+    "description": "An alternative version of **Trouble Brewing** from former The Pandemonium Institute Community Manager Ben Burns. This script lightly introduces additional deaths (**Gambler, Assassin**) and surviving an execution (**Fool, Devil's Advocate**) while emphasizing the key question of: Which Minions are in play? Determine the identity of the **Imp** in the midst of wild risky plays.",
     "keyCharacters": ["Gambler", "Grandmother", "Devil's Advocate", "Fool", "Assassin"],
     "specialRules": "",
     "link": "https://script.bloodontheclocktower.com/?script=H4sIAAAAAAAACjVPy2rEMAz8lTBnf0GOW3rfeylFsdXGxJaCLKeE0n9f4m0vEjNoHnr7QU6Y8VHZCQHUfVXDjBvLdOsmDQFClTHj9WA7VXh6IZnuhU78BpS8GFkmQUAsGrdKGxsCvowkVfV1oE8178LOpQzMdSdfEVBVNgR0SWz%2BL6W6PM%2FIPDdHQCt0%2FhlpQYDRwbIx74OsdOq1k%2FXhZhxLb3zpKIuPGJW45pIQsJDpVXfX3FSeOa1Ra%2FliEx%2B5NEqHRvJhsZ%2FXjGSF%2FVvreDXXHe8PqWPpaj0BAAA%3D"
@@ -795,7 +788,7 @@
     "link": "https://script.bloodontheclocktower.com/?script=H4sIAAAAAAAACjWQwUoEQQxEf2XIub9gj948CCLeRCQzndkO00mGTnpZFf9dutFbUal6JHn7Bs5wgQ%2BhQEiAPYo1uMBroeUZNZOYcpflUT04ehAkUBSCCzxgXp7MdHlhZ73CT4JrQ81iUahBAkeuNsRWUFZqgpwhAaseROeMXFHWOhXdrW3sMUxz53P0rLfgOT6b7eQ%2BccLq0ahCgiCsmD8hwW42jBM33v8xppCgdsXgbYRZjwkTM90K1zxTece%2FhTPduDrmm204L0V3dOeBEfSgJqyjdPbjGO%2FygitWizI8gwRfJmvvFd5%2FAXMNSv9ZAQAA"
   },
   {
-    "title": "Sects and Violets",
+    "title": "Sects & Violets",
     "difficulty": "Intermediate",
     "author": "The Pandemonium Institute",
     "description": "One of the core Base 3 scripts made by the creators of the game. **Sects and Violets** is a good puzzle for those who want to play a logician's conundrum. This case introduces 4 new possible Demon types that cause misinformation in some way, while the Minions are loud and public to cause distractions.",
@@ -825,7 +818,7 @@
     "title": "Insanity & Intuition",
     "difficulty": "Intermediate",
     "author": "Sam",
-    "description": "From the Carousel Script collection released by TPI. This script is all about **Madness**: Good players afflicted by this curse must lie sincerely about their information or else forfeit the lives of their allies and their own. Originally built around the **Harpy** & **High Priestess**, **Insanity & Intuition** is overflowing with madness and muddled information. Get out your gut reads to get on the right track!",
+    "description": "From the Carousel Script collection released by The Pandemonium Institute. This script is all about **Madness**: Good players afflicted by this curse must lie sincerely about their information or else forfeit the lives of their allies and their own. Originally built around the **Harpy** & **High Priestess**, **Insanity & Intuition** is overflowing with madness and muddled information. Get out your gut reads to get on the right track!",
     "keyCharacters": ["High Priestess", "General", "Amnesiac", "Harpy"],
     "specialRules": "",
     "link": "https://script.bloodontheclocktower.com/?script=H4sIAAAAAAAACiWOwU4DMQxEf6Wac4QEx%2F5BzxwRQmbXTUw3dpQ4W7aIf0cJN8%2F46WnefiArzvjI7IQA6p6s4oxXyghQyowzLtpIxY8T6Xq6qHdxMT3tz08v%2BA24qcTkCCjyLYyAlnpk%2FRrCJDGVKtycW0NAZOVK24Ar05K4IuBq1buy87bN7HbXpcq8rdKyDSll5Sa0IKDSznpjLpMoVsoRq91nynTYbPvjsXGm5v%2FQRrHzaovPb%2B5OOiZvXcllmRppphNOVMuBgIUrq%2B19DP80yyvpOnq1lVoSQYDkgoBdotVs1WWgV9IYO97%2FACawnYtdAQAA"
