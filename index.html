@@ -127,17 +127,32 @@
             display: block;
             padding: 0.5rem 0.75rem;
             border-radius: 4px;
-            transition: all 0.2s ease;
+            transition: all 0.25s ease-in-out;
             font-size: 1.3rem;
             font-family: 'Dumbledor', serif;
-            border-left: 3px solid transparent;
             color: #2e2d42;
         }
 
-        .toc-list a:hover {
-            background-color: #f0e5d8;
-            border-left-color: #f7930e;
-            color: #2e2d42;
+        /* Sidebar item hover - stylized ink-stain effect
+           Target the actual TOC markup (.toc-list li a and .toc-link) and keep .toc-item for compatibility */
+        .toc-list li a,
+        .toc-link,
+        .toc-item a {
+            display: block;
+            padding: 0.5rem 0.75rem;
+            border-radius: 4px;
+            transition: background-color 0.25s ease-in-out, color 0.25s ease, transform 0.15s ease;
+            transform: translateX(0);
+            will-change: transform, background-color;
+        }
+
+        .toc-list li a:hover,
+        .toc-link:hover,
+        .toc-item a:hover {
+            background-color: rgba(46, 45, 66, 0.06);
+            color: #690303;
+            transform: translateX(4px);
+            border-radius: 10px 20px 20px 10px;
         }
 
         /* TOC collapse/expand */
