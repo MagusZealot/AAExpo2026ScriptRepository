@@ -144,15 +144,18 @@
             transition: background-color 0.25s ease-in-out, color 0.25s ease, transform 0.15s ease;
             transform: translateX(0);
             will-change: transform, background-color;
+            border-radius: 10px 10px 10px 10px;
+            width: 95%;
         }
 
         .toc-list li a:hover,
         .toc-link:hover,
         .toc-item a:hover {
             background-color: rgba(46, 45, 66, 0.06);
-            color: #690303;
+            color: #8d0505;
             transform: translateX(4px);
-            border-radius: 10px 20px 20px 10px;
+            border-radius: 10px 10px 10px 10px;
+            width: 95%;
         }
 
         /* TOC collapse/expand */
@@ -522,19 +525,70 @@
             opacity: 0.85;
         }
 
+        .scroll-top-button {
+            position: fixed;
+            right: 1.5rem;
+            bottom: 1.5rem;
+            z-index: 1000;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 3rem;
+            height: 3rem;
+            border: 1px solid #d6c6b1;
+            border-radius: 6px;
+            background-color: #fff;
+            background-image: url('tile-texture.png');
+            background-repeat: repeat;
+            background-size: auto;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+            color: #2e2d42;
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(10px);
+            pointer-events: none;
+            transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, background-color 0.4s ease, color 0.4s ease;
+        }
+
+        .scroll-top-button:hover {
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+            background-color: rgba(46, 45, 66, 0.25);
+            background-color: #2e2d42; 
+            background-blend-mode: overlay;
+            color:#d3d3d3;
+        }
+
+        .scroll-top-button.visible {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        .scroll-top-button svg {
+            width: 1.1rem;
+            height: 1.1rem;
+            display: block;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
+            /* Stack layout: sidebar above main content */
             .container {
-                flex-direction: column;
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
             }
 
+            /* Reset sidebar to participate in normal document flow */
             .sidebar {
-                width: 100%;
-                max-height: auto;
-                position: relative;
-                top: auto;
+                position: relative !important;
+                top: 0 !important;
+                height: auto !important;
+                width: 100% !important;
+                max-width: 100%;
+                margin-bottom: 0.5rem;
+                box-shadow: none;
                 border-right: none;
-                /* border-bottom: 1px solid #e3e3e3; */
                 padding: 1.5rem;
             }
 
@@ -565,19 +619,31 @@
                 margin-bottom: 0;
             }
 
+            /* Make TOC compact and grid-like on mobile when opened */
             .toc-list {
-                display: flex;
-                flex-wrap: wrap;
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
                 gap: 0.5rem;
+                padding-top: 0.5rem;
             }
 
             .toc-list li {
-                margin-bottom: 0.5rem;
+                margin: 0;
             }
 
-            .toc-list a {
-                padding: 0.4rem 0.6rem;
-                font-size: 0.85rem;
+            .toc-list li a,
+            .toc-link,
+            .toc-item a {
+                padding: 0.5rem 0.6rem;
+                font-size: 0.95rem;
+                white-space: normal; /* allow wrapping */
+            }
+
+            .scroll-top-button {
+                right: 1rem;
+                bottom: 1rem;
+                width: 2.75rem;
+                height: 2.75rem;
             }
         }
 
@@ -754,6 +820,13 @@
     <footer>
         <p>&copy; 2026 Clocktower Manila Scripts Repository</p>
     </footer>
+
+    <button id="scrollTopButton" class="scroll-top-button" type="button" aria-label="Scroll to top" title="Top">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 19V5"></path>
+            <path d="M5 12l7-7 7 7"></path>
+        </svg>
+    </button>
 
     <script>
         const scriptsData = [
@@ -1002,6 +1075,7 @@
         const beginnerCount = document.getElementById('beginnerCount');
         const intermediateCount = document.getElementById('intermediateCount');
         const expertCount = document.getElementById('expertCount');
+        const scrollTopButton = document.getElementById('scrollTopButton');
 
         // Initialize the page
         function init() {
@@ -1010,6 +1084,7 @@
             populateTOC();
             setupSearch();
             setupSidebarToggle();
+            setupScrollTopButton();
         }
 
         // Update difficulty counts
@@ -1139,6 +1214,21 @@
                 if (sidebar) sidebar.classList.toggle('collapsed');
                 tocToggle.setAttribute('aria-expanded', String(!isCollapsed));
             });
+        }
+
+        function setupScrollTopButton() {
+            if (!scrollTopButton) return;
+
+            const updateVisibility = () => {
+                scrollTopButton.classList.toggle('visible', window.scrollY > 300);
+            };
+
+            scrollTopButton.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            window.addEventListener('scroll', updateVisibility, { passive: true });
+            updateVisibility();
         }
 
         // Filter scripts based on search term
