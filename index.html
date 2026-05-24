@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         @font-face {
             font-family: 'Dumbledor';
@@ -570,26 +571,98 @@
             display: block;
         }
 
+        .sidebar-scrim,
+        .sidebar-handle {
+            display: none;
+        }
+
         /* Responsive Design */
-        @media (max-width: 768px) {
-            /* Stack layout: sidebar above main content */
+        @media (max-width: 900px) {
             .container {
-                display: grid;
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
+                display: block;
+                max-width: none;
+                width: 100%;
             }
 
-            /* Reset sidebar to participate in normal document flow */
             .sidebar {
-                position: relative !important;
-                top: 0 !important;
-                height: auto !important;
-                width: 100% !important;
-                max-width: 100%;
-                margin-bottom: 0.5rem;
-                box-shadow: none;
-                border-right: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 1100;
+                width: min(84vw, 320px);
+                height: 100dvh;
+                max-height: none;
+                margin-bottom: 0;
+                overflow-y: auto;
+                box-shadow: 8px 0 24px rgba(0, 0, 0, 0.2);
+                border-right: 1px solid #d6c6b1;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 8px;
                 padding: 1.5rem;
+                transform: translateX(-100%);
+                transition: transform 0.28s ease, max-height 0.45s cubic-bezier(0.25, 1, 0.5, 1), padding 0.35s ease;
+                will-change: transform;
+            }
+
+            body.mobile-sidebar-open {
+                overflow: hidden;
+            }
+
+            body.mobile-sidebar-open .sidebar {
+                transform: translateX(0);
+            }
+
+            .sidebar-scrim {
+                position: fixed;
+                inset: 0;
+                z-index: 1090;
+                display: block;
+                background: rgba(46, 45, 66, 0.35);
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.2s ease;
+            }
+
+            body.mobile-sidebar-open .sidebar-scrim {
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+            .sidebar-handle {
+                position: fixed;
+                left: 0;
+                top: 50%;
+                z-index: 1085;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 2rem;
+                height: 4rem;
+                border: 1px solid #d6c6b1;
+                border-left: 0;
+                border-radius: 0 8px 8px 0;
+                background-color: #fff;
+                background-image: url('tile-texture.png');
+                background-repeat: repeat;
+                color: #2e2d42;
+                box-shadow: 4px 0 14px rgba(0, 0, 0, 0.16);
+                cursor: pointer;
+                transform: translateY(-50%);
+                transition: opacity 0.2s ease, transform 0.2s ease;
+            }
+
+            .sidebar-handle::before {
+                content: "";
+                width: 0.55rem;
+                height: 0.55rem;
+                border-right: 2px solid currentColor;
+                border-bottom: 2px solid currentColor;
+                transform: rotate(-45deg);
+            }
+
+            body.mobile-sidebar-open .sidebar-handle {
+                opacity: 0;
+                pointer-events: none;
             }
 
             .main-content {
@@ -794,6 +867,8 @@
                 </ul>
             </div>
         </aside>
+        <div id="sidebarScrim" class="sidebar-scrim" aria-hidden="true"></div>
+        <button id="sidebarHandle" class="sidebar-handle" type="button" aria-label="Open contents" aria-controls="tocList" aria-expanded="false"></button>
 
         <!-- Main Content -->
         <main class="main-content">
@@ -1076,6 +1151,8 @@
         const intermediateCount = document.getElementById('intermediateCount');
         const expertCount = document.getElementById('expertCount');
         const scrollTopButton = document.getElementById('scrollTopButton');
+        const sidebarHandle = document.getElementById('sidebarHandle');
+        const sidebarScrim = document.getElementById('sidebarScrim');
 
         // Initialize the page
         function init() {
@@ -1084,6 +1161,7 @@
             populateTOC();
             setupSearch();
             setupSidebarToggle();
+            setupMobileSidebar();
             setupScrollTopButton();
         }
 
@@ -1216,6 +1294,83 @@
             });
         }
 
+        function setupMobileSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            if (!sidebar || !sidebarHandle || !sidebarScrim) return;
+
+            const mobileMedia = window.matchMedia('(max-width: 900px)');
+            let touchStartX = 0;
+            let touchStartY = 0;
+            let touchStartedInDismissArea = false;
+            let touchStartedAtEdge = false;
+
+            const setMobileSidebarOpen = (isOpen) => {
+                document.body.classList.toggle('mobile-sidebar-open', isOpen);
+                sidebarHandle.setAttribute('aria-expanded', String(isOpen));
+                sidebarHandle.setAttribute('aria-label', isOpen ? 'Close contents' : 'Open contents');
+            };
+
+            const closeMobileSidebar = () => setMobileSidebarOpen(false);
+            const openMobileSidebar = () => setMobileSidebarOpen(true);
+
+            sidebarHandle.addEventListener('click', openMobileSidebar);
+            sidebarScrim.addEventListener('click', closeMobileSidebar);
+
+            document.addEventListener('click', (event) => {
+                const link = event.target.closest ? event.target.closest('.toc-link') : null;
+                if (link && mobileMedia.matches) closeMobileSidebar();
+            });
+
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && mobileMedia.matches) {
+                    closeMobileSidebar();
+                }
+            });
+
+            document.addEventListener('touchstart', (event) => {
+                if (!mobileMedia.matches || event.touches.length !== 1) return;
+
+                const touch = event.touches[0];
+                touchStartX = touch.clientX;
+                touchStartY = touch.clientY;
+                touchStartedInDismissArea = sidebar.contains(event.target) || sidebarScrim.contains(event.target);
+                touchStartedAtEdge = touchStartX <= 28;
+            }, { passive: true });
+
+            document.addEventListener('touchend', (event) => {
+                if (!mobileMedia.matches || !touchStartX || event.changedTouches.length !== 1) return;
+
+                const touch = event.changedTouches[0];
+                const deltaX = touch.clientX - touchStartX;
+                const deltaY = touch.clientY - touchStartY;
+                const isHorizontalSwipe = Math.abs(deltaX) > 70 && Math.abs(deltaX) > Math.abs(deltaY) * 1.4;
+                const isOpen = document.body.classList.contains('mobile-sidebar-open');
+
+                if (isHorizontalSwipe && !isOpen && touchStartedAtEdge && deltaX > 0) {
+                    openMobileSidebar();
+                }
+
+                if (isHorizontalSwipe && isOpen && touchStartedInDismissArea && deltaX < 0) {
+                    closeMobileSidebar();
+                }
+
+                touchStartX = 0;
+                touchStartY = 0;
+                touchStartedInDismissArea = false;
+                touchStartedAtEdge = false;
+            }, { passive: true });
+
+            const handleViewportChange = (event) => {
+                if (!event.matches) closeMobileSidebar();
+            };
+
+            if (mobileMedia.addEventListener) {
+                mobileMedia.addEventListener('change', handleViewportChange);
+            } else {
+                mobileMedia.addListener(handleViewportChange);
+            }
+        }
+
         function setupScrollTopButton() {
             if (!scrollTopButton) return;
 
@@ -1268,10 +1423,7 @@
             return formatted;
         }
 
-        // Initialize on page load
-        document.addEventListener('DOMContentLoaded', init);
-        
-        // Fallback if DOMContentLoaded already fired
+        // Initialize on page load, or immediately if the script runs after parsing.
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', init);
         } else {
