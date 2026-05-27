@@ -77,6 +77,19 @@ function updateStats() {
 }
 
 // Render scripts grid
+function getScriptIndex(script, fallbackIndex) {
+    const originalIndex = scriptsData.indexOf(script);
+    return originalIndex === -1 ? fallbackIndex : originalIndex;
+}
+
+function getSpecialRules(script) {
+    if (Array.isArray(script.specialRules)) {
+        return script.specialRules.filter(Boolean);
+    }
+
+    return script.specialRules ? [script.specialRules] : [];
+}
+
 function renderScripts(scripts) {
     if (scripts.length === 0) {
         scriptsGrid.innerHTML = `
@@ -88,8 +101,13 @@ function renderScripts(scripts) {
         return;
     }
 
-    scriptsGrid.innerHTML = scripts.map((script, index) => `
-        <article class="script-card" id="script-${index}" data-title="${script.title}">
+    scriptsGrid.innerHTML = scripts.map((script, index) => {
+        const scriptIndex = getScriptIndex(script, index);
+
+        const specialRules = getSpecialRules(script);
+
+        return `
+        <article class="script-card" id="script-${scriptIndex}" data-title="${script.title}">
             <div class="card-header">
                 <h2 class="card-title">
                     ${script.link ? `<a href="${escapeHtml(script.link)}" target="_blank" rel="noopener noreferrer" class="card-title-link">${escapeHtml(script.title)} </a>` : escapeHtml(script.title)}
@@ -117,31 +135,38 @@ function renderScripts(scripts) {
                     </div>
                 </div>
 
-                ${script.specialRules ? `
+                ${specialRules.length ? `
                 <div class="divider-wrapper">
                     <img src="divider.png" alt="" class="divider-img">
                 </div>
                 <div class="rules-section">
                     <span class="rules-label">Special Rules</span>
-                    <div class="rules-callout">
-                        ${formatWithStrong(script.specialRules)}
-                    </div>
+                    ${specialRules.map(rule => `
+                        <div class="rules-callout">
+                            ${formatWithStrong(rule)}
+                        </div>
+                    `).join('')}
                 </div>
                 ` : ''}
             </div>
         </article>
-    `).join('');
+    `;
+    }).join('');
 }
 
 // Populate table of contents
-function populateTOC() {
-    tocList.innerHTML = scriptsData.map((script, index) => `
+function populateTOC(scripts = scriptsData) {
+    tocList.innerHTML = scripts.map((script, index) => {
+        const scriptIndex = getScriptIndex(script, index);
+
+        return `
         <li>
-            <a href="#script-${index}" class="toc-link">
+            <a href="#script-${scriptIndex}" class="toc-link">
                 ${escapeHtml(script.title)}
             </a>
         </li>
-    `).join('');
+    `;
+    }).join('');
 
     // Add smooth scrolling
     document.querySelectorAll('.toc-link').forEach(link => {
@@ -167,6 +192,7 @@ function setupSearch() {
         const searchTerm = e.target.value.toLowerCase().trim();
         const filtered = filterScripts(searchTerm);
         renderScripts(filtered);
+        populateTOC(filtered);
     });
 }
 
@@ -323,8 +349,8 @@ function filterScripts(searchTerm) {
             script.author,
             script.difficulty,
             script.description,
-            script.specialRules || '',
-            ...(script.keyCharacters || [])
+            ...(script.keyCharacters || []),
+            ...getSpecialRules(script)
         ].map(normalizeSearchText);
 
         const allCharactersText = script.allCharacters
