@@ -1,0 +1,830 @@
+@font-face {
+    font-family: 'Dumbledor';
+    src: url('dumbledor.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'GermaniaOne';
+    src: url('GermaniaOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    scroll-behavior: smooth;
+    background-color: #fbf8f3;
+    /* Page background texture (tiled) */
+    background-image: url('background-texture.png');
+    background-repeat: repeat;
+    background-size: auto;
+    background-attachment: fixed;
+    color: #2e2d42;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Header & Layout */
+header {
+    background: linear-gradient(135deg, #2e2d42 0%, #3d3c51 100%);
+    color: #fbf8f3;
+    padding: 2.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border-bottom: 3px solid #f7930e;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+header .site-logo {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    flex: 0 0 auto;
+}
+
+header h1 {
+    font-family: 'Germania One', serif;
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+header p {
+    font-size: 1rem;
+    opacity: 0.9;
+    font-weight: 400;
+}
+
+.container {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: calc(100vh - 200px);
+}
+
+/* Sidebar / Table of Contents */
+.sidebar {
+    width: 280px;
+    /* TOC background tile */
+    background-image: url('tile-texture.png');
+    background-repeat: repeat;
+    background-size: auto;
+    background-color: #fff;
+    border-right: 1px solid #e3e3e3;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 2rem 1.5rem;
+    position: sticky;
+    top: 0;
+    max-height: 100vh;
+    overflow-y: auto;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.08);
+}
+
+.sidebar h3 {
+    font-family: 'Dumbledor', serif;
+    font-size: 1.5rem;
+    color: #2e2d42;
+    font-weight: 700;
+}
+
+.difficulty-text {
+    font-family: 'GermaniaOne', 'Dumbledor', serif;
+    font-size: 1rem;
+    display: inline-block;
+    margin-left: 0.35rem;
+}
+
+.toc-list {
+    list-style: none;
+}
+
+.toc-list li {
+    margin-bottom: 0.75rem;
+}
+
+.toc-list a {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    transition: all 0.25s ease-in-out;
+    font-size: 1.3rem;
+    font-family: 'Dumbledor', serif;
+    color: #2e2d42;
+}
+
+/* Sidebar item hover - stylized ink-stain effect
+   Target the actual TOC markup (.toc-list li a and .toc-link) and keep .toc-item for compatibility */
+.toc-list li a,
+.toc-link,
+.toc-item a {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    transition: background-color 0.25s ease-in-out, color 0.25s ease, transform 0.15s ease;
+    transform: translateX(0);
+    will-change: transform, background-color;
+    border-radius: 10px 10px 10px 10px;
+    width: 95%;
+}
+
+.toc-list li a:hover,
+.toc-link:hover,
+.toc-item a:hover {
+    background-color: rgba(46, 45, 66, 0.06);
+    color: #8d0505;
+    transform: translateX(4px);
+    border-radius: 10px 10px 10px 10px;
+    width: 95%;
+}
+
+/* TOC collapse/expand */
+.toc-toggle-header {
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.toggle-icon {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    font-size: 0.9rem;
+    line-height: 1;
+}
+
+.toc-wrapper {
+    max-height: 2000px;
+    transform: scaleY(1);
+    transform-origin: top;
+    transition: max-height 0.5s ease-in-out, opacity 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    opacity: 1;
+    overflow: hidden;
+}
+
+.toc-wrapper.collapsed {
+    max-height: 0;
+    opacity: 0;
+    transform: scaleY(0);
+}
+
+.toc-toggle-header.collapsed .toggle-icon {
+    transform: rotate(-90deg);
+}
+
+/* Sidebar collapse (vertical/unfurl) */
+.sidebar {
+    transition: max-height 0.45s cubic-bezier(0.25, 1, 0.5, 1), padding 0.35s ease;
+    max-height: 100vh;
+}
+
+/* Preserve scrolling when expanded, hide overflow only when collapsed */
+.sidebar:not(.collapsed) {
+    overflow-y: auto;
+}
+
+.sidebar.collapsed {
+    /* Only keep the header visible when collapsed; preserve horizontal margins */
+    max-height: 3.6rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    overflow: hidden;
+}
+
+/* When collapsed, visually hide TOC contents but keep header visible */
+.sidebar.collapsed .toc-wrapper {
+    max-height: 0;
+    opacity: 0;
+    transform: scaleY(0);
+    pointer-events: none;
+}
+
+.sidebar.collapsed .stat-divider,
+.sidebar.collapsed .stats-section {
+    display: none;
+}
+
+.sidebar.collapsed .toc-toggle-header {
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.sidebar.collapsed .toc-toggle-header .toggle-icon {
+    transform: rotate(-90deg);
+    margin-left: auto;
+}
+
+.sidebar.collapsed .toc-list a {
+    display: none;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 2rem;
+}
+
+/* Search Bar */
+.search-container {
+    margin-bottom: 2.5rem;
+    /* Search background texture */
+    background-image: url('tile-texture.png');
+    background-repeat: repeat;
+    background-size: auto;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e3e3e3;
+    font-family: 'Dumbledor', serif;
+    font-size: 1rem;
+}
+
+.search-container label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #2e2d42;
+    font-size: 1.3rem;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d3d3d3;
+    border-radius: 6px;
+    font-family: 'Dumbledor', serif;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    background-color: #fbf8f3;
+}
+
+#searchInput:focus {
+    outline: none;
+    border-color: #f7930e;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(247, 147, 14, 0.1);
+}
+
+.search-hint {
+    font-size: 1rem;
+    color: #999;
+    margin-top: 0.5rem;
+    font-style: italic;
+    font-family: 'Dumbledor', serif;
+}
+
+/* Scripts Grid */
+.scripts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Script Card */
+.script-card {
+    /* Entry tile texture */
+    scroll-margin-top: 2.5rem;
+    background-image: url('tile-texture.png');
+    background-repeat: repeat;
+    background-size: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #e3e3e3;
+    display: flex;
+    flex-direction: column;
+}
+
+.script-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    border-color: #d3d3d3;
+}
+
+.card-header {
+    padding: 1.5rem 1.5rem 0.5rem;
+    border-bottom: none;
+}
+
+.card-title {
+    font-family: 'Dumbledor', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2e2d42;
+    margin-bottom: 0.25rem;
+    word-break: break-word;
+}
+
+.card-title-link {
+    color: #2e2d42;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.card-title-link:hover {
+    color: #f7930e;
+    text-decoration: none;
+}
+
+.card-meta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    /* margin-bottom: 0.5rem; */
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'GermaniaOne', 'Dumbledor', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge.beginner {
+    background-color: #d4c4b0;
+    color: #3d3c51;
+    border: 1px solid #c4b5a0;
+}
+
+.badge.intermediate {
+    background-color: #ffe1b9;
+    color: #644100;
+    border: 1px solid #c2812c;
+}
+
+.badge.expert {
+    background-color: #c6130f;
+    color: #ffe5e0;
+    border: 1px solid #d4a89f;
+}
+
+.author {
+    font-family: 'Dumbledor', serif;
+    font-size: 1.2rem;
+    color: #6b6969;
+    font-weight: 600;
+}
+
+.card-body {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #2e2d42;
+    margin-bottom: 1.25rem;
+}
+
+/* Key Characters Tags */
+.characters-section {
+    margin-bottom: 1.25rem;
+}
+
+.characters-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.25rem;
+    display: block;
+    font-family: 'Dumbledor', serif;
+}
+
+.characters-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.character-tag {
+    display: inline-block;
+    background-color: #e8ddd2;
+    color: #2e2d42;
+    padding: 0.4rem 0.7rem;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border: 1px solid #d4c4b0;
+    transition: all 0.18s ease;
+    font-family: 'Dumbledor', serif;
+}
+
+.character-tag-link {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.character-tag:hover {
+    background-color: rgba(247,147,14,0.08);
+    border-color: var(--accent-underline);
+    transform: translateY(-2px);
+    color:#a00a0a
+}
+
+/* Special Rules Callout */
+.rules-section {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+}
+
+.rules-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.25rem;
+    display: block;
+    font-family: 'Dumbledor', serif;
+}
+
+.rules-callout {
+    background: linear-gradient(135deg, #f0e5d8 0%, #f5ede6 100%);
+    border-left: 4px solid #f7930e;
+    padding: 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #2e2d42;
+    font-style: italic;
+    min-height: 1.5rem;
+}
+
+.rules-callout.empty {
+    color: #999;
+    font-style: normal;
+}
+
+/* No Results Message */
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem 2rem;
+    color: #999;
+}
+
+.no-results h3 {
+    font-family: 'Dumbledor', serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #2e2d42;
+}
+
+/* Footer */
+footer {
+    background: #2e2d42;
+    color: #fbf8f3;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+    border-top: 3px solid #f7930e;
+}
+
+footer p {
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+.scroll-top-button {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    z-index: 1000;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid #d6c6b1;
+    border-radius: 6px;
+    background-color: #fff;
+    background-image: url('tile-texture.png');
+    background-repeat: repeat;
+    background-size: auto;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+    color: #2e2d42;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, background-color 0.4s ease, color 0.4s ease;
+}
+
+.scroll-top-button:hover {
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+    background-color: rgba(46, 45, 66, 0.25);
+    background-color: #2e2d42; 
+    background-blend-mode: overlay;
+    color:#d3d3d3;
+}
+
+.scroll-top-button.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.scroll-top-button svg {
+    width: 1.1rem;
+    height: 1.1rem;
+    display: block;
+}
+
+.sidebar-scrim,
+.sidebar-handle {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .container {
+        display: block;
+        max-width: none;
+        width: 100%;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1100;
+        width: min(84vw, 320px);
+        height: 100dvh;
+        max-height: none;
+        margin-bottom: 0;
+        overflow-y: auto;
+        box-shadow: 8px 0 24px rgba(0, 0, 0, 0.2);
+        border-right: 1px solid #d6c6b1;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 8px;
+        padding: 1.5rem;
+        transform: translateX(-100%);
+        transition: transform 0.28s ease, max-height 0.45s cubic-bezier(0.25, 1, 0.5, 1), padding 0.35s ease;
+        will-change: transform;
+    }
+
+    body.mobile-sidebar-open {
+        overflow: hidden;
+    }
+
+    body.mobile-sidebar-open .sidebar {
+        transform: translateX(0);
+    }
+
+    .sidebar-scrim {
+        position: fixed;
+        inset: 0;
+        z-index: 1090;
+        display: block;
+        background: rgba(46, 45, 66, 0.35);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s ease;
+    }
+
+    body.mobile-sidebar-open .sidebar-scrim {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .sidebar-handle {
+        position: fixed;
+        left: 0;
+        top: 50%;
+        z-index: 1085;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2rem;
+        height: 4rem;
+        border: 1px solid #d6c6b1;
+        border-left: 0;
+        border-radius: 0 8px 8px 0;
+        background-color: #fff;
+        background-image: url('tile-texture.png');
+        background-repeat: repeat;
+        color: #2e2d42;
+        box-shadow: 4px 0 14px rgba(0, 0, 0, 0.16);
+        cursor: pointer;
+        transform: translateY(-50%);
+        transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    .sidebar-handle::before {
+        content: "";
+        width: 0.55rem;
+        height: 0.55rem;
+        border-right: 2px solid currentColor;
+        border-bottom: 2px solid currentColor;
+        transform: rotate(-45deg);
+    }
+
+    body.mobile-sidebar-open .sidebar-handle {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .main-content {
+        padding: 1.5rem;
+    }
+
+    .scripts-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .sidebar h3 {
+        display: inline-block;
+        margin-right: 1rem;
+        margin-bottom: 0;
+    }
+
+    /* Make TOC compact and grid-like on mobile when opened */
+    .toc-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 0.5rem;
+        padding-top: 0.5rem;
+    }
+
+    .toc-list li {
+        margin: 0;
+    }
+
+    .toc-list li a,
+    .toc-link,
+    .toc-item a {
+        padding: 0.5rem 0.6rem;
+        font-size: 0.95rem;
+        white-space: normal; /* allow wrapping */
+    }
+
+    .scroll-top-button {
+        right: 1rem;
+        bottom: 1rem;
+        width: 2.75rem;
+        height: 2.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1.5rem 1rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .main-content {
+        padding: 1rem;
+    }
+
+    .search-container {
+        padding: 1rem;
+    }
+
+    .scripts-grid {
+        gap: 1rem;
+    }
+
+    .card-header {
+        padding: 1rem 1rem 0.4rem;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+}
+
+/* Scrollbar Styling */
+.sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: #723a3a;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #c6130f;
+    border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: #a00a0a;
+}
+
+/* Difficulty Count Stats */
+.stats-section {
+    display: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.stat-divider {
+    width: 100%;
+    margin: 0.25rem 0 0.5rem 0;
+}
+
+.divider-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.divider-wrapper {
+    margin: 0.15rem 0 0.25rem 0;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.stat-badge {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+}
+
+.stat-badge.beginner {
+    background-color: #d4c4b0;
+    font-family: 'GermaniaOne';
+}
+
+.stat-badge.intermediate {
+    background-color: #dbcd0b;
+    font-family: 'GermaniaOne';
+}
+
+.stat-badge.expert {
+    background-color: #c6130f;
+    font-family: 'GermaniaOne';
+}
+

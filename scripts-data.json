@@ -1,0 +1,263 @@
+[
+  {
+    "title": "Trouble Brewing",
+    "difficulty": "Beginner",
+    "author": "The Pandemonium Institute",
+    "description": "The bread and butter vanilla beginner script part of the core Base 3 scripts shipped with Blood on the Clocktower. **Trouble Brewing** has a little bit of everything: passive information, active abilities, and roles that bait the Evil team. As Good, use logic and proactivity to find the elusive **Imp**. If you're Evil, lie about which Minions are in play to deceive!",
+    "keyCharacters": ["Fortune Teller", "Empath", "Chef", "Saint", "Drunk", "Spy", "Imp"],
+    "allCharacters": ["chef","investigator","washerwoman","librarian","empath","fortuneteller","undertaker","monk","slayer","soldier","ravenkeeper","mayor","virgin","butler","drunk","recluse","saint","poisoner","spy","scarletwoman","baron","imp"],
+    "specialRules": "",
+    "link": "https://script.bloodontheclocktower.com/?script=H4sIAAAAAAAACjWPQWrFMAxErxJm7RP8ZXfdddFdKUVJ9BMRWw6ynBA%2BvXuxQzfSDIyepK8XZMYDP4mdEEDV12x44HPl4YN05pRVahretbh4dUaAUuIWsVzHyMOb8Sm64DdgWvmJANGDi8tCng0BJ5WV7cyJFAFRRiOTrjnt5CsCntm8KjvHyG2k6szmtHWTsm4IKJGu7kuOs3RldLBuzPudo6vvO8QWafix%2Bo2brXaE8RRraT8UEnUE7FlK1hu7X61OZJH9%2F9qRLLcuacf3H3Auo3YuAQAA"
+  },
+  {
+    "title": "Everyone Can Play",
+    "difficulty": "Beginner",
+    "author": "Ben Burns",
+    "description": "An alternative version of **Trouble Brewing** from former The Pandemonium Institute Community Manager Ben Burns. This script lightly introduces additional deaths (**Gambler, Assassin**) and surviving an execution (**Fool, Devil's Advocate**) while emphasizing the key question of: Which Minions are in play? Determine the identity of the **Imp** in the midst of wild risky plays.",
+    "keyCharacters": ["Gambler", "Grandmother", "Devil's Advocate", "Fool", "Assassin"],
+    "allCharacters": ["librarian","clockmaker","grandmother","fortuneteller","empath","monk","undertaker","gambler","artist","slayer","fool","ravenkeeper","mayor","drunk","recluse","saint","moonchild","baron","poisoner","assassin","devilsadvocate","spy","scarletwoman","imp"],
+    "specialRules": "",
+    "link": "https://script.bloodontheclocktower.com/?script=H4sIAAAAAAAACjVPy2rEMAz8lTBnf0GOW3rfeylFsdXGxJaCLKeE0n9f4m0vEjNoHnr7QU6Y8VHZCQHUfVXDjBvLdOsmDQFClTHj9WA7VXh6IZnuhU78BpS8GFkmQUAsGrdKGxsCvowkVfV1oE8178LOpQzMdSdfEVBVNgR0SWz%2BL6W6PM%2FIPDdHQCt0%2FhlpQYDRwbIx74OsdOq1k%2FXhZhxLb3zpKIuPGJW45pIQsJDpVXfX3FSeOa1Ra%2FliEx%2B5NEqHRvJhsZ%2FXjGSF%2FVvreDXXHe8PqWPpaj0BAAA%3D"
+  },
+  {
+    "title": "Pies Baking",
+    "difficulty": "Beginner",
+    "author": "Ryback",
+    "description": "A popular variant of **Trouble Brewing** based around two new specific roles: **the Marionette and the Cannibal**. This **Marionette** thinks they're on the Good team but unknowingly helps the Evil team instead. The **Cannibal** can eat other players' roles at the risk of being poisoned by Evil players. Intuition is necessary here to figure out if you've eaten bad food, or just strung along.",
+    "keyCharacters": ["Noble", "Cannibal", "Marionette", "Imp"],
+    "allCharacters": ["chef","noble","washerwoman","librarian","empath","fortuneteller","cannibal","monk","slayer","soldier","ravenkeeper","mayor","virgin","butler","drunk","recluse","saint","poisoner","spy","scarletwoman","baron","imp","marionette","cannibal"],
+    "specialRules": "",
+    "link": "https://script.bloodontheclocktower.com/?script=H4sIAAAAAAAACjWOQWoDMQxFr1L%2B2ieYZU9Qui2lyB4lI8aWjGwnDCF3D57Q3f9C7%2FF%2FHpAVC%2F4Kd0IAjb6ZY8H3ESntCFAqjAVfwu3jk3bRK54BajEzAtLGFwTcqW3sdyukCMgSnVzOzKVS3xBwMe9DuXPO7AgoplPfMh1nb5ZXOZPTjXVnrme7iV9lmgodNg%2BJVCVSRkAc%2FS1rJNonyimPNoetPk5%2FNWmm76d6TIbcpq4l8sz9f3MhF1PufcJSKn5fAg0uxhsBAAA%3D"
+  },
+  {
+    "title": "Crash & Curse 101",
+    "difficulty": "Beginner",
+    "author": "lostmorning",
+    "description": "A vastly different beginner script dissimilar to **Trouble Brewing**. In this script, Good players use strong and direct abilities like the flexible **Gossip** to help confirm information while the Evil team has the cursing **Witch** and public **Psychopath** who can publicly kill players in broad daylight. It's a race against time as players learn the basics of crashing and cursing.",
+    "keyCharacters": ["Noble", "Gossip", "Golem", "Politician", "Psychopath"],
+    "allCharacters": ["steward","knight","noble","shugenja","chambermaid","innkeeper","exorcist","gossip","nightwatchman","seamstress","cannibal","farmer","fool","drunk","golem","moonchild","politician","godfather","devilsadvocate","witch","psychopath","assassin","imp"],
+    "specialRules": "",
+    "link": "https://script.bloodontheclocktower.com/?script=H4sIAAAAAAAACh3OMW7DMAwF0KsYHDppaFavOUZRFLTEWKwl0hDpOEXRuxf0%2BIH%2FH%2FnxC1xghq9OjpAAD686YIam5l2HsKyQQLATzHAfaHV6m%2B7HMJpu7zf4S2BOJ44CCTbhtXrUdWkECaweK8l3wLliX2h05GiyyEa004AE9NKR2WK3qhnvAQR0oufaUQIi7OaDzIJCEV6wQYIHjn4hD9XIZRyyXVCjDgm6quTKLW7u2tg58wWuWh7o9doWenIzLE%2FN6PH2yZ5rLOwnV93RI6AZmnGMue%2Fw%2BQ97UzhDOgEAAA%3D%3D"
+  },
+  {
+    "title": "Bad Moon Rising",
+    "difficulty": "Intermediate",
+    "author": "The Pandemonium Institute",
+    "description": "One of the core Base 3 scripts made by the creators of the game. **Bad Moon Rising** has roles that can cause extra deaths during the night and roles that can protect players from dying during the day and night. This murder mystery is all about risk and reward, and determining the reason of how many and why people die at night. With the introduction of 4 new possible Demon types, Good must make calculated risks to survive the nights caused by the carnal Evil Team.",
+    "keyCharacters": ["Gossip", "Lunatic", "Devil's Advocate", "Mastermind", "Po", "Zombuul", "Shabaloth", "Pukka"],
+    "allCharacters": ["grandmother","sailor","chambermaid","innkeeper","gambler","exorcist","gossip","courtier","professor","minstrel","tealady","fool","pacifist","goon","lunatic","tinker","moonchild","godfather","devilsadvocate","assassin","mastermind","pukka","shabaloth","po","zombuul"],
+    "specialRules": "",
+    "link": "https://script.bloodontheclocktower.com/?script=H4sIAAAAAAAACjWQwUoEQQxEf2XIub9gj948CCLeRCQzndkO00mGTnpZFf9dutFbUal6JHn7Bs5wgQ%2BhQEiAPYo1uMBroeUZNZOYcpflUT04ehAkUBSCCzxgXp7MdHlhZ73CT4JrQ81iUahBAkeuNsRWUFZqgpwhAaseROeMXFHWOhXdrW3sMUxz53P0rLfgOT6b7eQ%2BccLq0ahCgiCsmD8hwW42jBM33v8xppCgdsXgbYRZjwkTM90K1zxTece%2FhTPduDrmm204L0V3dOeBEfSgJqyjdPbjGO%2FygitWizI8gwRfJmvvFd5%2FAXMNSv9ZAQAA"
+  },
+  {
+    "title": "Sects & Violets",
+    "difficulty": "Intermediate",
+    "author": "The Pandemonium Institute",
+    "description": "One of the core Base 3 scripts made by the creators of the game. **Sects and Violets** is a good puzzle for those who want to play a logician's conundrum. This case introduces 4 new possible Demon types that cause misinformation in some way, while the Minions are loud and public to cause distractions.",
+    "keyCharacters": ["Snake Charmer", "Mathematician", "Savant", "Cerenovus", "Pit Hag", "Vortox", "Vigormortis", "Fang Gu", "No Dashii"],
+    "allCharacters": ["clockmaker","snakecharmer","mathematician","dreamer","flowergirl","towncrier","oracle","savant","seamstress","philosopher","artist","juggler","sage","sweetheart","klutz","barber","mutant","witch","cerenovus","pithag","eviltwin","nodashii","vigormortis","vortox","fanggu"],
+    "specialRules": "",
+    "link": "https://script.bloodontheclocktower.com/?script=H4sIAAAAAAAACiWPQU7FMAxEr%2FI1C1Y5wb8BOyQQG4SQf2oS0yT%2BcpwWgbg7SrvzaMZ%2B47dfyIIrPio7IYCGZzVc8ZL58kRt4apNRr08tu7iwxkBjSrjimeO3i8Pl1fRwt7xFxCLxrXSyoaA3mjlmMnqISt55kouUaghYDGm0%2FksurMlsYIA171Fk8NQo1gmsdNGzefAVLsb946Ae5aiXe%2F5CJO59Jn5GimVswGlY3tn9sxk013L8B8E3MhuZ6%2Fh5%2B1dPGYERDZuuo0DIZ4pIYA3Kb7LLN50oZ5FELBJUqs6yVOpuX7Ph6ilNPD%2BDxvt5BNeAQAA"
+  },
+  {
+    "title": "Drunks, Deaths, & Diplomacy",
+    "difficulty": "Intermediate",
+    "author": "Midnight",
+    "description": "An alternative introduction to **Bad Moon Rising** and its mechanics: multiple night deaths and protection from night and day deaths. When multiple players die at night, is it due to the ravenous **Po**? Or is it just a sneaky **Imp** hiding behind its Minions?",
+    "keyCharacters": ["Acrobat", "Exorcist", "Snitch", "Mastermind", "Devil's Advocate", "Goblin", "Po"],
+    "allCharacters": ["knight","chef","investigator","sailor","monk","acrobat","exorcist","nightwatchman","slayer","ravenkeeper","tealady","mayor","pacifist","butler","drunk","moonchild","saint","snitch","devilsadvocate","assassin","goblin","mastermind","baron","imp","po"],
+    "specialRules": "",
+    "link": "https://script.bloodontheclocktower.com/?script=H4sIAAAAAAAACjWOQW7EIAxFrxJ5zQmyzrYnqKqRA55gBUyEnbRR1btXZjQ7g%2F5%2F73%2F%2BAieY4VHJEALgabl1mOGDk%2FCWDQIIVoIZln7KrmFaCC1rmFDStPBRWsV4w1%2BA%2FV2ImZ4QgOUiNd7QWocAilzGUZvsroq9reh5%2Bmk9sg6XI77RYq4oXip4k5c6XiQ70TFeRlgw3Q7De0APjPx8MdbTykglXzyETWLmkl4rxEMqbDF7iC4uiulqEY18lyqqstu3tpZxVFSjXlkcsWJv%2Fsn1cHGDr3%2FvNjVzRgEAAA%3D%3D"
+  },
+  {
+    "title": "Murders & Misinformation",
+    "difficulty": "Intermediate",
+    "author": "Midnight",
+    "description": "An alternative intro script to **Sects and Violets** with its varying degrees of misinformation. This script has the same strategy for Evil players in mind with **Sects & Violets**: pick off the important and trusted Good players before they figure out the correct demon type. The Good team must use strong binary information to deduce who and what the Demon is.",
+    "keyCharacters": ["Steward", "Princess", "Sweetheart", "Godfather", "Psychopath", "Witch", "No Dashii"],
+    "allCharacters": ["steward","chef","noble","fortuneteller","oracle","seamstress","philosopher","slayer","princess","juggler","ravenkeeper","mayor","virgin","butler","recluse","sweetheart","saint","godfather","poisoner","witch","psychopath","scarletwoman","nodashii","imp"],
+    "specialRules": "",
+    "link": "https://script.bloodontheclocktower.com/?script=H4sIAAAAAAAACi1PW24DMQi8SsS3T5A75ARVVRGbXdPaxgKc1Srq3St7%2BzUPBtB8vIET3OGrkiMEwOFZFO7w4NR4zw4BGlaaztBEajds6fZg47aJVnSWBr8BzOlATRAgZtrmljwLQYBN1Ecjp1JIIYAoxjUwwmquZAYBeuYiJj2vjBU8F%2BnKLV6J77Hv1wXFF7Ufor5UxVMmvlh3bhDgOfw%2FR7EMW68OIs%2BEOusYcpu4S9rQr4dd2KQterDHPC07Y5aOPoVF1EJ%2BSMW2uiW0zAwBuHb4%2FAP9%2BlJrRgEAAA%3D%3D"
+  },
+  {
+    "title": "Insanity & Intuition",
+    "difficulty": "Intermediate",
+    "author": "Sam",
+    "description": "From the Carousel Script collection released by The Pandemonium Institute. This script is all about **Madness**: Good players afflicted by this curse must lie sincerely about their information or else forfeit the lives of their allies and their own. Originally built around the **Harpy** & **High Priestess**, **Insanity & Intuition** is overflowing with madness and muddled information. Get out your gut reads to get on the right track!",
+    "keyCharacters": ["High Priestess", "General", "Amnesiac", "Harpy"],
+    "allCharacters": ["knight","pixie","shugenja","highpriestess","general","preacher","fortuneteller","towncrier","oracle","amnesiac","ravenkeeper","poppygrower","mayor","puzzlemaster","plaguedoctor","mutant","lunatic","poisoner","harpy","cerenovus","boomdandy","nodashii","imp","vigormortis","fanggu"],
+    "specialRules": "",
+    "link": "https://script.bloodontheclocktower.com/?script=H4sIAAAAAAAACiWOQW5DIQxErxLNmhPkBll3WVWV%2B78DbsBGYJL8VL17Bd15xk9P8%2F4D2XHGZ2EnBNDwZA1nvFFBgFJhnHHRTip%2BnEj300V9iIspfgNuKjE5Aqo8hRHQ04is39OVJKbahLtz7wiIrNwoT7gxbYkbAq7WfCg757yy20O3Juu2RlueUirKXWhDQKM76425LqJarUds9lip0GGrHa9X5kLd%2F6FMcfBum69vGU46J%2Beh5LItjXTTBSdq9UDAxo3V7mMO%2FzIrO%2Bk%2Be7WdehJBgJSKgLtEa8Way0SvpDEOfPwBChC%2FDFgBAAA%3D"
+  },
+  {
+    "title": "Strings Still Attached",
+    "difficulty": "Intermediate",
+    "author": "gerick",
+    "description": "In **Strings Still Attached**, peace is never found in the grave. Death is no longer a confirmation of innocence. When players die, they might be a Minion who retains their power, or a demon who has cursed an outsider to take their power. Players must untangle a mess of conflicting information before the Demon's puppet strings tighten for good.",
+    "keyCharacters": ["Grandmother", "Librarian", "Undertaker", "Nightwatchman", "Marionette", "Fang Gu", "Vigormortis"],
+    "allCharacters": ["chef","noble","grandmother","librarian","balloonist","fortuneteller","oracle","undertaker","monk","gossip","nightwatchman","seamstress","mayor","tinker","recluse","sweetheart","moonchild","barber","godfather","poisoner","assassin","marionette","boffin","vigormortis","fanggu"],
+    "specialRules": "",
+    "link": "https://script.bloodontheclocktower.com/?script=H4sIAAAAAAAACi2OQWpDMQxErxK09gmy6xmyLKXo27ItYktB0m8ooXcvdrsTw5uneX8BF7jC56RASIBndDW4QiPjfIcEgpPgCrcwluaXW%2FAYl7cIzJ0K%2FCTIneri9BgECZqhlKnRySDB4MPQGAUSHDiGqrAHJKhqcQoFjbFBNcy7f0ohC7zvdKqsDU3d%2BbGecOvxxMh9bqUTTg8j9wXjt65SsPy1jfI4fUn9SRSd0GJLVXLnUfYmOzbbtFT8H%2F1QdpV9oju6s2y9sQpFLOGhte70i5vaVAteEypKayd8%2FAI6TLYlVwEAAA%3D%3D"
+  },
+  {
+    "title": "1984",
+    "difficulty": "Intermediate",
+    "author": "gerick",
+    "description": "*War is Peace. Freedom is Slavery. Ignorance is Strength.* \n**1984** is a script inspired by George Orwell's *Nineteen Eighty-Four* where confirmation is unreliable and misinformation spreads freely. In a script of propaganda and paranoia, players must determine which is the truth or which are just false information.",
+    "keyCharacters": ["Soldier", "Fool", "Acrobat", "Alsaahir", "Politician", "Damsel", "Marionette", "Ojo", "Lleech"],
+    "allCharacters": ["grandmother","librarian","sailor","snakecharmer","gambler","acrobat","alsaahir","philosopher","soldier","farmer","ravenkeeper","fool","pacifist","drunk","tinker","moonchild","politician","damsel","godfather","devilsadvocate","assassin","marionette","mastermind","ojo","lleech"],
+    "specialRules": "",
+    "link": "https://script.bloodontheclocktower.com/?script=H4sIAAAAAAAACjWPwU7GMAyD3yXnXZA4wF4FIeS12RrWNlPSf5dfvDvKBjfL8mfZH0%2BSTDN9NR6gifAYRY1m2tgk7TRRR2Oa6eX97ZV%2BJtoMPTcdhY0mqrIYTNBpIodUDdM7dk4F1q7MhrbUSyGZLhihqgNFwjyKVHU97kLXmuVS6z9vOLnvzMdtq9agkGQVj65sjx5Dh%2FT9ijTVnorUHDmtMiTdCzOac9Cb5hV%2FFzKfUh351ITBsc0d7hJAg4l2Hpff4IOtSY9e%2Fda4X5lToc9faEulSkYBAAA%3D"
+  },
+  {
+    "title": "Spyfall",
+    "difficulty": "Intermediate",
+    "author": "lostmorning",
+    "description": "Your mission, should you choose to accept, is simple: Determine if a **Spy** is in play, and eliminate their Demon. **Spyfall** is centered around the Spy's two abilities: to know everyone's roles, and to register as Good, Townsfolk, or Outsider. In a game where everyone seemingly knows everyone and can vouch for the goodness of everyone, can Good doubt their fellow players?",
+    "keyCharacters": ["Lycanthrope", "Spy", "Kazali", "Shabaloth", "Imp", "Vortox"],
+    "allCharacters": ["clockmaker","grandmother","librarian","shugenja","empath","dreamer","undertaker","gambler","lycanthrope","seamstress","professor","juggler","farmer","ravenkeeper","drunk","recluse","klutz","snitch","godfather","spy","pithag","scarletwoman","imp","shabaloth","kazali","vortox"],
+    "specialRules": "",
+    "link": "https://script.bloodontheclocktower.com/?script=H4sIAAAAAAAACjWPQW7EIAxF7%2FLXnGCu0WVVVU5wCBPAyJhpM6PevYK0y299P%2Fu9vxA9bvjMbAQH6raL4oYkzbJoiSXAoVBm3PBWz41Swo%2FDmmQ9Mh2scAhKxWexfaYUFyWNVODQ9h643AeacyXb4eCVKc9mL57V%2FiGUl3QBzpWK7SqVB4IpN1NuDQ5VZePWZNTuPYRrYSO9gEoPLgdznclrL8eY8pp6G6wjdXsOZom2jl%2BC%2BI3%2B%2Fm71HBei7TSc20qa2L4kT5OY6%2FShhZJMj4OelCIcHqIm3%2Fj4BUQ9ZC9NAQAA"
+  },
+  {
+    "title": "Two Lefts Don't Make A Riot",
+    "difficulty": "Intermediate",
+    "author": "lostmorning",
+    "description": "It always starts peaceful. But in just three days; chaos erupts as Good players turn evil, voting becomes erratic, and fake news spreads awry. A short yet deep game involving the **Riot**, a Demon capable of causing death just through nomination. Can Good settle down quickly to solve the game before they kill each other unknowingly?",
+    "keyCharacters": ["Village Idiot", "Ogre", "Magician", "Zealot", "Mezepheles", "Summoner", "Riot", "Zenomancer"],
+    "allCharacters": ["knight","noble","washerwoman","shugenja","pixie","balloonist","villageidiot","flowergirl","towncrier","savant","seamstress","juggler","fool","magician","ogre","lunatic","recluse","zealot","puzzlemaster","mezepheles","widow","marionette","summoner","baron","riot","zenomancer"],
+    "specialRules": "",
+    "link": "https://script.bloodontheclocktower.com/?script=H4sIAAAAAAAACiWPMW7DMAxFr2Jw6aITeCvQMV2KbkVRMA4tM6HIgJKiwkXvXtBdyf%2FfIz9%2BgC8ww1ehhpAAe9vMYQax2oq5smZIoFgIZngfNp1obXV6MX1q0yveaHqe3tga%2FCa4KeetRdzOQpBgYN3IhxVUSFC3nkmvobnzN0fgjCJmyjVaDxbBTHwJXIJVbJBndoEEzYYuzuTBwQdqJCphqc2pVkhw7TnLsV%2FNolIw88KH2bKHTbpi4wUSOC3Sa8x2Qjl0977vQgVrOyCFdrpvJBTswRcbB9LZlFqLZu2lmB7hM7qFx%2F8v30nj5YUcPv8AlrTf4GEBAAA%3D"
+  },
+  {
+    "title": "Choose Your Own Alignment",
+    "difficulty": "Expert",
+    "author": "Narninian",
+    "description": "This script's twist? Choose whether to play for the Good or Evil Team... or so you might think. Featuring the **Gardener**, a Loric that allows the Storyteller to assign your character. There are a lot of characters that can figure out who's evil and who's lying. However, Town needs to watch out because that information might be falsified by the confusing **Vortox** or might be coming from one of many **Legions**.",
+    "keyCharacters": ["Amnesiac", "Atheist", "Bounty Hunter", "Cult Leader", "Poppy Grower", "Vortox", "Legion", "Bootlegger", "Gardener"],
+    "allCharacters": ["chef","steward","bountyhunter","empath","balloonist","cultleader","fortuneteller","oracle","innkeeper","amnesiac","seamstress","alchemist","poppygrower","atheist","mutant","klutz","drunk","lunatic","godfather","devilsadvocate","cerenovus","marionette","pukka","imp","vortox","legion","gardener","bootlegger","djinn"],
+    "specialRules": "Bootlegger and Gardener Lorics in play",
+    "link": "https://script.bloodontheclocktower.com/?script=H4sIAAAAAAAACiWQQU4EMQwEv7Lqc16wN8QdHoAQMok3CZPYUeLMsiD%2BjjJzs9vuastvv8gBV3xUNoIDTUvaccULdcmSSeAgVBlXPCfVwZeHzn55vcvlqeQolcXw5%2BAT3%2BAwjO%2FUAxw%2BdYo90hTjDgeujSwtnUpRlTwMDn4WK0zhWLlptylsXMrRaydfGA5ZZGNuh0hVeGTyK4upDus8xtKLT1xPatPWHrHr%2FXRY4lOv00hWsZVpP3AIfcoGhzKFLC9m1HBbhmUMvOcyKOzqydYdnjuL7nPlVepZhe0YtLlt63u5Njjs2k2%2FF5Zj1vXASD2wHNBPVSsc45nwlUXw%2Fg9U6L6ChQEAAA%3D%3D"
+  },
+  {
+    "title": "Coronation of the Deepfakes",
+    "difficulty": "Expert",
+    "author": "Aya",
+    "description": "The *__2024 script contest winner__* from our Discord server. Featuring the **Storm Catcher**, a Loric that spotlights and protects a key Townsfolk role: the **King** in this script. This script features world builders (**Atheist, Vortox, Legion**), role and alignment detectors, outed roles, and enough poisoning and madness to help the evil team (or the Storyteller) build their lies. Is the **King** good and trustworthy? Or fabricated?",
+    "keyCharacters": ["Atheist", "King", "Cult Leader", "Politician", "Marionette", "Kazali", "Vortox", "Legion", "Storm Catcher"],
+    "allCharacters": ["chef","empath","king","dreamer","cultleader","oracle","undertaker","savant","seamstress","artist","juggler","farmer","atheist","drunk","golem","saint","politician","poisoner","cerenovus","psychopath","marionette","eviltwin","kazali","vortox","legion","barista","harlot","judge","stormcatcher"],
+    "specialRules": "Storm Catcher Loric in play",
+    "link": "https://script.bloodontheclocktower.com/?script=H4sIAAAAAAAACi2QQU7FMAxEr%2FI165ygOwS3QAiZ1G1Mk7hy3H4%2BiLujpOw8Hnv85NcfyIwJ74WdEECHJzVMeHp0WakwJjyraSUXrTddbp749sK8L7Rxw29ATLwggMtOnhCwSV0RMBtTYUNAPLJnpnkINYqZEXDUmc1pG91GJ1XvBVNpbtxaxzGX1rufx7rmMbiQXaHkiS9ztqNuCFg1cxlZMqJ2zeISheoQ0rReOGxc9Tz6hb09YtJ%2F8EImWtm94%2FEp2e%2FSdzf6piwIONVcvxCQeRXt1geZtPG6RJb1Yp3XHtBcrUTymNjw9gf9d9fXagEAAA%3D%3D"
+  },
+  {
+    "title": "Dark Visions",
+    "difficulty": "Expert",
+    "author": "gerick",
+    "description": "**Dark Visions** is a high-intensity battle of wits where information may be hard to reach due to the influence of the **God of Ug**. Featuring the **God of Ug**, a Loric that strengthens one's voting power in exchange for the ability to speak directly. Roles in this script provide a lot of information for both good and evil. With the promise of voting power at the cost of speaking in one-syllable riddles for the **God of Ug**, **Dark Visions** promises a thrilling experience where words are your greatest weapon and your deadliest trap.",
+    "keyCharacters": ["Chambermaid", "Philosopher", "Juggler", "Savant", "Exorcist", "Wraith", "Vigormortis", "God of Ug"],
+    "allCharacters": ["chambermaid","snakecharmer","towncrier","oracle","exorcist","savant","seamstress","philosopher","fisherman","juggler","tealady","fool","pacifist","drunk","sweetheart","mutant","damsel","devilsadvocate","witch","cerenovus","wraith","imp","kazali","vigormortis","fanggu","godofug"],
+    "specialRules": "God of Ug Loric in play",
+    "link": "https://script.bloodontheclocktower.com/?script=H4sIAAAAAAAACiWOTU4FMQyDr4K8zglmzRnYIIRCm2nDtM1T2s7wI%2B6O%2Bt7Ocmzne%2F2FRmx4rzIYBJ4jm2NDEtdwgNC4CjY8sx9PL9rVWscfIWSuH%2BKVNYLQGx8SMnsVB2HY1YLrXZtzKAKCfJkH7WPF%2BeR2F8K1D5feQbhlLdbtlu%2B9XXte%2Bw2Ez5lSeSwLF47f625WVomD7o%2FV6LMt4n6JjCzsy6xzPF5Frl1WI8qppXM8LfBYYJeOkEEI4tLsnIvlctaxTK03EA7%2B4aIgnJrMq%2FnQldq5pTRBSBZtnwlv%2F1luEh9QAQAA"
+  },
+  {
+    "title": "Irrational Behavior",
+    "difficulty": "Expert",
+    "author": "josh :)",
+    "description": "A script of chaos and information featuring a Minion that can peek during the night when everyone is sleeping, the **Wraith**. Featuring the **Ventriloquist**, a Loric that protects players who repeatedly lie about their character in public. In this script, Evil will sacrifice themselves creating some **Irrational Behaviors** to allow the demon to hide in plain sight adding to the chaos brought by the **Ventriloquist**. If you waste all of your time dealing with the Minions, you are playing right into the **Demon's** hands.",
+    "keyCharacters": ["Shugenja", "Village Idiot", "Alsaahir", "Hermit", "Puzzlemaster", "Cerenovus", "Wizard", "Wraith", "Vigormortis", "Lord of Typhon", "Ventriloquist"],
+    "allCharacters": ["noble","librarian","shugenja","highpriestess","balloonist","villageidiot","fortuneteller","oracle","monk","alsaahir","seamstress","cannibal","banshee","hermit","mutant","zealot","puzzlemaster","poisoner","witch","cerenovus","wizard","wraith","vigormortis","fanggu","lordoftyphon","ventriloquist"],
+    "specialRules": "Ventriloquist Loric in play",
+    "link": "https://script.bloodontheclocktower.com/?script=H4sIAAAAAAAACiWQQW7EMAhFrzJiV8knyLK7nqGqKjIhNlMMKcapmqp3r%2BzuPiDe%2F%2FD6A7zBAu%2BVAiEB9ijmsMDDWrktT5BAsRIs8OKOwaYot2cqeLJ1h98EaqsQJBBeHZ1RIUErPZM%2BBrBwLocztaDWIMGKImbKLSDBySKYiTe2Ue7m0ZWCRMghgTneJ7uafoxw0hALj1EjrC38n3lHVV5RJl5bobFTyCsPau2BOsRFKNPn6NclVLHFtDmMm%2BmUXxz3MojkpHb2NnsX%2BjaEI0eZsbN5NQ8e8x015z4%2BYL7ZHt9HsfGEkzScxT77OPbtD1HX0YhqAQAA"
+  },
+  {
+    "title": "Purge Your Inner Demons",
+    "difficulty": "Expert",
+    "author": "Aya",
+    "description": "The *__2022 New Year's script contest winner__* from our Discord server. Featuring the **Big Wig**, a Loric that forces other players to defend your case. This script is thematic of reflecting and identifying inner demons that stunt our growth, and gaining control of our destiny. The Good team has capabilities that allow them to prove themselves while the Evil team will try to control and hinder the Good team into realizing their true potential. You must find the right path to success despite the misinformation brought by the Demons in this script.",
+    "keyCharacters": ["Amnesiac", "Bounty Hunter", "Dreamer", "Heretic", "Evil Twin", "Fearmonger", "Vortox", "Lleech", "Big Wig"],
+    "allCharacters": ["librarian","bountyhunter","empath","balloonist","dreamer","flowergirl","oracle","savant","philosopher","artist","slayer","cannibal","amnesiac","butler","drunk","klutz","heretic","poisoner","devilsadvocate","cerenovus","fearmonger","eviltwin","vigormortis","vortox","lleech","bigwig"],
+    "specialRules": "Big Wig Loric in play",
+    "link": "https://script.bloodontheclocktower.com/?script=H4sIAAAAAAAACiVPy07DQAz8lWrO%2BwW9IXHhxhUhhNzEJFa9duT1phTEv6NNj%2FPSzLz%2FQmac8Vk5CQXUc%2FXAGU%2F3AY0q44zXHguf3rzH6cWM4%2FTM1a3hr0DlEhRChoKLd8v72i05UMB1o1wHT6ruJi1RMAdTPfQv9RvHIqEo8KBJGQWNdrJh3FZRb76th5kiH%2FmmdD%2BYiczkQiNM1bgJTaOrpx7yHN2uKLhqzx8UrBycMiybS3N7mHgXbTTvPlGO9omDzffexj6mqG7L48wumjcZN3dZPKqPQQN5pH%2BjQJV5Ou7KcpMFH%2F%2FQTmAvXAEAAA%3D%3D"
+  },
+  {
+    "title": "Ravenswood Noir***",
+    "difficulty": "Expert",
+    "author": "Al & lostmorning",
+    "description": "Adapted from one of the *__2025 Traveller's focused script contest winners__* from our Discord server with permission from the author. Featuring the **Gangster**, a Traveller that kills their neighbors brazenly, but with consent from the other neighbor. Headline for today: a dead body was found under the clocktower and the most wanted **Gangster** is on the loose! Adding to the mix are Outsiders that will cause a lot of chaos in town like the Politician and the Hermit. Can they help the Good team on killing the pesky Evil players whose strengths are based on executions or will they turn around and shoot an unsuspecting Townsfolk for the sake of their Demon? Stay tuned to this crime thriller script, **Ravenswood Noir**.",
+    "keyCharacters": ["Village Idiot", "Alchemist", "Magician", "Politician", "Hermit", "Organ Grinder", "Boffin", "Vizier", "Legion", "Lleech", "Gangster"],
+    "allCharacters": ["empath","sailor","villageidiot","oracle","seamstress","artist","slayer","fisherman","juggler","alchemist","tealady","magician","pacifist","hermit","hatter","politician","zealot","devilsadvocate","fearmonger","mastermind","organgrinder","legion","fanggu","lleech","gangster"],
+    "specialRules": "Gangster Traveler in play",
+    "link": "https://script.bloodontheclocktower.com/?script=H4sIAAAAAAAACjWPQU7EMAxFr1J5waLKCcqKC7BgixD6atzUyImrxO1oQNwdJSN2kf97zvf7D0mkhT4zOygQTt%2Bt0kIvOj0hH8%2BTWvNstUhJFKggMy30hotLu5nF6dWkzvNMv4E4H%2FCdAjWIWqVAl6gisUQxp0BWsSp3gJGbV26t%2F1ldWo%2Bb4s5d26TtXDMKBfo6U9Ixha475wfqDEW8U6CMJKsM9MAq2yPvuowH3Id9mIr%2Fk98MHY0iX6IN8bIV3pttjJqtpOFkNO%2BLShzlE0qqUuLIlJNY37WhpHT2iTKv%2FfzOdZE%2B%2FgBvwqGzXwEAAA%3D%3D"
+  },
+  {
+    "title": "The Game is Rigged!",
+    "difficulty": "Expert",
+    "author": "lostmorning",
+    "description": "A solo **Al-Hadikhia** script about an unfair game show, starring the **Wizard, Boomdandy, Vizier**, and more. Featuring the **Zenomancer**, a Loric that rewards players who do extra optional sidequests. The **Al-Hadikhia** has chosen 3 lucky winners each night who can die! Your choice affects how the others will fare. Are you executing the Demon to win the game? Or is the **Mastermind** just behind all of this waiting to win on the very next day? Hedge your bets because the game will be rigged!",
+    "keyCharacters": ["Bounty Hunter", "Snake Charmer", "Gambler", "Klutz", "Hatter", "Wizard", "Boomdandy", "Vizier", "Al-Hadikhia", "Zenomancer"],
+    "allCharacters": ["knight","noble","pixie","bountyhunter","balloonist","snakecharmer","king","oracle","monk","gambler","professor","soldier","amnesiac","banshee","hermit","sweetheart","klutz","hatter","mutant","wizard","xaan","boomdandy","mastermind","vizier","alhadikhia","zenomancer","bootlegger"],
+    "specialRules": "Zenomancer Loric in play",
+    "link": "https://script.bloodontheclocktower.com/?script=H4sIAAAAAAAACkVRy04DMQz8leBzxAfsFRBw4IK4VRVyN25ibWJXcbYvxL%2BjpCBu8cxkxo%2FNF3CACT4LNQQPuLakFSbIaq1oFZYIHgQLwQQfidwzFnJs7p1jpHAHHnaqLVOMVGHawENCNfeCrVF1dc1kk3vdu5boDwxM5gfwdOTsGmFxM4qbk6qROyUd5CMVFYcS3BsLq5jDSg6LSrTWFcUoH8nuYfvtYRGOqfVWdZcJPBz4zDS6W6Vd0iqNai8xZ1Vh61oTXGhOWMvgltuwWnEeFkVlAQ8Ryy4PwaHqnsy0v01z4IFiETLGebiLJep%2FE9XCI%2BNE1BJh7cWS13bt7NhEj1gbSmdOfMUawMMZUW5LLQElXLoIrXU76fyRr7%2BxOWHgJXG%2F25VEC8p8m%2FH%2FINsfMDiPqOEBAAA%3D"
+  },
+  {
+    "title": "The Illusion of Choice",
+    "difficulty": "Expert",
+    "author": "Jake",
+    "description": "In this zero drunk and poisoning script, players must choose their Storyteller to gain information. Featuring the **Knaves**, a Loric that makes the game have TWO Storytellers: Only one tells the truth, the other lies. Included in this two-for-one-ST Special are a bunch of one-time information roles, jumping demons and minimal misinformation.",
+    "keyCharacters": ["Ojo", "Kazali", "Bounty Hunter", "Hermit", "Balloonist", "Knaves"],
+    "allCharacters": ["shugenja","bountyhunter","highpriestess","balloonist","general","snakecharmer","fortuneteller","savant","seamstress","philosopher","artist","farmer","ravenkeeper","hermit","recluse","plaguedoctor","damsel","witch","cerenovus","pithag","scarletwoman","imp","ojo","kazali","fanggu","knaves"],
+    "specialRules": "Knaves Loric in play",
+    "link": "https://script.bloodontheclocktower.com/?script=H4sIAAAAAAAACjWOMU4EMQxFr7L6dU4wLTRQUyAhhEzWm2QnsUexMytA3B1lVpS2%2F39%2Bbz8oZyz4aOyEABqetWPBM638%2BogAocZY8JL59FTrsKJy0svpIWuJjN8AyyOxXGf7U4f4Vx7i3BGQS8pbL2zOZvNMtapKMUdAYuFOFQEmtHLM1NvRumj3Iexc6zEb7SSzYUzNvN9ZWy5VTbd8ZKj7nXr5p3TaWVbm7W7CvZV57xzrMJ6ASmnwWaPrTJypGU%2BbW%2FGYERC5s%2Bg%2BjmfFM6WpEKlX9ps2EgSUtiFAr4qAlb6plkNBUhpzI7Sz4f0P93dVvWQBAAA%3D"
+  },
+  {
+    "title": "Allegory of the Grave",
+    "difficulty": "Expert",
+    "author": "lostmorning",
+    "description": "Can you trust the shadows cast upon the cave walls? Featuring the **Tor**, a Loric that forces players to play blindly with no information whatsoever to their role and alignment. Read into your information, lie when necessary, and determine which team you're playing for when you're as blind as a bat!",
+    "keyCharacters": ["Hermit", "Cannibal", "Golem", "Boomdandy", "Pukka", "Zombuul", "Lord of Typhon", "Lleech", "Tor"],
+    "allCharacters": ["clockmaker","empath","sailor","snakecharmer","mathematician","flowergirl","towncrier","oracle","monk","soldier","cannibal","farmer","mayor","pacifist","hermit","ogre","recluse","golem","poisoner","devilsadvocate","eviltwin","boomdandy","pukka","zombuul","lordoftyphon","lleech","tor"],
+    "specialRules": "Tor Loric in play",
+    "link": "https://script.bloodontheclocktower.com/?script=H4sIAAAAAAAACkWQS26FMAxFt4I8zgqYddRFVFVlEkOsODFyAohXde%2BV6aAzf869%2Fnx8AyeY4avSQAiAx8hqMINoH1WtcdsgQMNKMMObCG1q96TrNDJN74YnwU%2BAKBpLxUIGAajuODIE6MiiXukNC8WMVh%2Bg4shUcXBkbBBgFb3INjaBAEOvFo0fUA2jkCu0FfdRSX%2BdiK3xgi5Y%2F23vZ9qOkVfuAwJkssoe6GbuYxTl6B5tKlQdVu7aHn2ik6VjOjXicMbzcbGvuKjWhC3dLjlK8V%2B9tC7H4SuIWtJ13HtWh0WIYn5uMfj8BTGU%2BchjAQAA"
+  },
+  {
+    "title": "The Sanguinary Afterparty",
+    "difficulty": "Expert",
+    "author": "Jake",
+    "description": "Featuring the **Matron**, a Traveller that forces players to sit down; and can dictate new seating arrangements. This script is filled with neighbor-based misinformation and misdirection due to the presence of the ever-confusing **Matron**! So take a seat, and don't move!",
+    "keyCharacters": ["Lord of Typhon", "Empath", "Tea Lady", "Cult Leader", "Matron"],
+    "allCharacters": ["noble","shugenja","empath","preacher","chambermaid","mathematician","fortuneteller","cultleader","exorcist","savant","courtier","philosopher","artist","tealady","drunk","recluse","barber","politician","poisoner","devilsadvocate","xaan","marionette","nodashii","imp","lordoftyphon","matron"],
+    "specialRules": "Matron Traveller in play",
+    "link": "https://script.bloodontheclocktower.com/?script=H4sIAAAAAAAACj2OwWoDMQxEfyXM2V%2BQW689FdJbKUVrK7Ea2zKyHLKU%2FnvZXehNGr3RzMcPJOGMr8pOCKDpWQ1nvNKdEdCoMs54z3y6ULtNaWTr6eXqbKc3Ml%2FxG9B0KRs88rxx%2B97%2BcO3kGQHdmGJmQ0DMVBe2SpIQUMkzV3KJQg0BVzWfjZ1LOehZvDClfeGnWpThWwg9qG1D1Gku%2B7lnKTq0HzlkfqDOVCitCEg22x0BxrHMsXVdyJbDq0X%2BS3SVoW3XEz%2BkDEoPjeSb40k7UslEG%2FuuNU00sggCpHYEFLWkV1971gN204bPP2EFEC5nAQAA"
+  },
+  {
+    "title": "Under Sacred Direction",
+    "difficulty": "Expert",
+    "author": "Paripi",
+    "description": "One of the *__2025 Travellers focused script contest winners__* from our Discord server. Featuring the **Bishop**, a Traveller that removes nomination agency from players in exchange for some information. Players needs to adjust with the limited nominations and figure out the right execution with little to no information. With the constant confusion caused by roles in the script that manipulate game rules and social plays, the town needs to adjust and figure out a way to use the **Bishop** to lead them to victory.",
+    "keyCharacters": ["Noble", "Fisherman", "Alchemist", "Amnesiac", "Pacifist", "Bishop"],
+    "allCharacters":["steward","noble","pixie","highpriestess","balloonist","savant","fisherman","alchemist","amnesiac","banshee","mayor","pacifist","atheist","hermit","barber","mutant","zealot","devilsadvocate","wizard","xaan","marionette","yaggababble","lilmonsta","ojo","legion","bishop"],
+    "specialRules": "Bishop Traveller in play",
+    "link": "https://script.bloodontheclocktower.com/?script=H4sIAAAAAAAACi2QS24EMQhErzJi7RP0OjeIsoqiCNtMm8g2LWD%2Byt0jurNyyTyqgM8XcIUFvgc5QgK8eBOFBTZU3hgSTBwEC3zMSnp6x6JUT2%2BsVJxlwm8Cc7qh1kAld4IEG9853sZr25TJnMwgQcbeRSabQwLDK84QZ7ZGOnBGfC%2BNxgHgmGSMZW%2Bc1igsBz5EIwILn%2F85b3SosGHfec0U2Lj4EfIk7BKi0pW7Yb1KQQ%2FHGz%2BP6e%2B4jzBQWSb5XnzgumLGfOzVuQ%2BZth9KfiR%2BaI0rJMhsTTb4%2BgNnVfc%2BUAEAAA%3D%3D"
+  },
+  {
+    "title": "Veritas et Tentatio",
+    "difficulty": "Expert",
+    "author": "Midnight",
+    "description": "A blessedly complex world-building script with a holy breadth of possibilities. Featuring the **Pope**, a Loric that allows duplicate roles to be possible. The **Pope** blesses you with the gift of doubling up Good roles. However, the Evil team will try to tempt the Good players into joining their side using the power of the **Mezepheles** and the **Summoner**. A word from the **Pope**: \"Thou shall seek and end the wretched Demon before thy brethren succumbs to Evil and conspire against thee.\"",
+    "keyCharacters": ["Atheist", "Knight", "Alsaahir", "Banshee", "Zealot", "Mezepheles", "Summoner", "Lil' Monsta", "Pope"],
+    "allCharacters": ["steward","knight","librarian","empath","highpriestess","balloonist","savant","alsaahir","artist","cannibal","amnesiac","banshee","atheist","drunk","plaguedoctor","mutant","zealot","mezepheles","cerenovus","xaan","summoner","scarletwoman","lilmonsta","nodashii","ojo","pope"],
+    "specialRules": "Pope Loric in play",
+    "link": "https://script.bloodontheclocktower.com/?script=H4sIAAAAAAAACjWQwWrEMAxEf2WZs78g%2F9Bb6aWUosRira4tBUveLVv678UJvT1GmtGg9x9IxoLPxkFIoBHFOha8SFa5lkCCUmMseOMuQX7huLyyBoUYfhM8%2BEE9I%2BH2b6iydupCigRuO0VBQpFr2buwB7sjYaVazVR8OpzupBOoOlGRPrHHOdxIVVaqU2vKLrQdfvXCPMUofG7mPvSGhL3SdXC2LWwmtRFn%2BpOp2oTGT94LV55NNu6sdh%2BTv%2Blo7aM1U55m36hXjoe1Y1KlNlM%2FnqWWyYsIEuzL5l3bGR9%2FGOCLXlQBAAA%3D"
+  },
+  {
+    "title": "Live Draft on May 31, 2026",
+    "difficulty": "Expert",
+    "author": "EVERYONE",
+    "description": "A game dedicated to players who know the ins and outs of most of Blood on the Clocktower characters. Like with usual online Discord draft games, we will draft and choose the script's characters on the spot! We encourage highly experienced players to join.",
+    "keyCharacters": ["Possibly anything!"],
+    "allCharacters": [],
+    "specialRules": "Players will draft the script on the spot. The link to the script will be updated with the drafted characters.",
+    "link": "https://script.bloodontheclocktower.com/?script=H4sIAAAAAAAACouuVspMUbJSis9NLUlU0lFKLC3JyC9SslJyDXMNivT3c1XSUcpLzE1VslLyySxLVXApSkwrUcjPU%2FBNrFQwNtRRMDIwMlOqjQUAetBRSUgAAAA%3D"
+  }
+]
+
