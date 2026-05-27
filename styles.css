@@ -22,8 +22,8 @@ html, body {
     background-color: #fbf8f3;
     /* Page background texture (tiled) */
     background-image: url('background-texture.png');
-    background-repeat: repeat;
-    background-size: auto;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     background-attachment: fixed;
     color: #2e2d42;
     font-family: 'Inter', sans-serif;
@@ -395,7 +395,7 @@ header p {
     font-family: 'Dumbledor', serif;
     font-size: 1.2rem;
     color: #6b6969;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .card-body {
@@ -578,6 +578,14 @@ footer p {
 
 /* Responsive Design */
 @media (max-width: 900px) {
+    html,
+    body {
+        background-size: auto 100dvh;
+        background-position: center top;
+        background-attachment: scroll;
+        background-repeat: repeat-y;
+    }
+
     .container {
         display: block;
         max-width: none;
