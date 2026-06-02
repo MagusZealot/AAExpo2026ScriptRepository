@@ -4,10 +4,19 @@
 }
 
 @font-face {
+    font-family: 'Germania One';
+    src: url('GermaniaOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     font-family: 'GermaniaOne';
     src: url('GermaniaOne-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 * {
@@ -106,7 +115,7 @@ header p {
 }
 
 .difficulty-text {
-    font-family: 'GermaniaOne', 'Dumbledor', serif;
+    font-family: 'Germania One', 'GermaniaOne', 'Dumbledor', serif;
     font-size: 1rem;
     display: inline-block;
     margin-left: 0.35rem;
@@ -368,7 +377,7 @@ header p {
     border-radius: 20px;
     font-size: 1rem;
     font-weight: 500;
-    font-family: 'GermaniaOne', 'Dumbledor', sans-serif;
+    font-family: 'Germania One', 'GermaniaOne', 'Dumbledor', sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -824,16 +833,16 @@ footer p {
 
 .stat-badge.beginner {
     background-color: #d4c4b0;
-    font-family: 'GermaniaOne';
+    font-family: 'Germania One', 'GermaniaOne';
 }
 
 .stat-badge.intermediate {
     background-color: #dbcd0b;
-    font-family: 'GermaniaOne';
+    font-family: 'Germania One', 'GermaniaOne';
 }
 
 .stat-badge.expert {
     background-color: #c6130f;
-    font-family: 'GermaniaOne';
+    font-family: 'Germania One', 'GermaniaOne';
 }
 
