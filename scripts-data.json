@@ -1155,13 +1155,58 @@
     "author": "EVERYONE",
     "description": "A game dedicated to players who know the ins and outs of most of Blood on the Clocktower characters. Like with usual online Discord draft games, we will draft and choose the script's characters on the spot! We encourage highly experienced players to join.",
     "keyCharacters": [
-      "Possibly anything!"
+      "Pixie",
+      "High Priestess",
+      "Balloonist",
+      "General",
+      "Preacher",
+      "Fortune Teller",
+      "Savant",
+      "Alsaahir",
+      "Engineer",
+      "Courtier",
+      "Huntsman",
+      "Alchemist",
+      "Magician",
+      "Poppy Grower",
+      "Goon",
+      "Golem",
+      "Lunatic",
+      "Damsel",
+      "Yaggababble",
+      "Legion",
+      "Kazali",
+      "Al-Hadikhia",
+      "Bootlegger"
     ],
-    "allCharacters": [],
+    "allCharacters": [
+      "pixie",
+      "highpriestess",
+      "balloonist",
+      "general",
+      "preacher",
+      "fortuneteller",
+      "savant",
+      "alsaahir",
+      "engineer",
+      "courtier",
+      "huntsman",
+      "alchemist",
+      "magician",
+      "poppygrower",
+      "goon",
+      "golem",
+      "lunatic",
+      "damsel",
+      "yaggababble",
+      "legion",
+      "kazali",
+      "alhadikhia"
+    ],
     "specialRules": [
       "Players will draft the script on the spot.", 
-      "The link to the script will be updated with the drafted characters."
+      "The the script was updated with the drafted characters after the game was played."
     ],
-    "link": "https://script.bloodontheclocktower.com/?script=H4sIAAAAAAAACouuVspMUbJSis9NLUlU0lFKLC3JyC9SslJyDXMNivT3c1XSUcpLzE1VslLyySxLVXApSkwrUcjPU%2FBNrFQwNtRRMDIwMlOqjQUAetBRSUgAAAA%3D"
+    "link": "https://script.bloodontheclocktower.com/?script=H4sIAAAAAAAAClWQy2oDMQxFf8VobUof0EXWza4vuiiUEIrGo9giHmuQNUmnpf9e7Ky6s48OV4%2FdD%2FAIG%2FicyBA84GJJFDawfd%2B%2Bfbw8b8FDwYlgA498IvegeDAnxT3h6u5uvLu9vr0HD4OIZYqRFDY7eM24klY3NptGZ4lcSKgYrGEuzhJXV4PybFew%2F%2FUw8xcTeEgc06xM1ajWFow5ixSuBh4iFVLM4GFWwpBIwcNB1JZCRjn3f8UTlmZjroiJG6MSuVAvB1nUuD%2FTUqxOWLobEk2XLhNGDtzxLPO8RpVz96NIg3kpaBw6yDSBhxGnSn2suoYkM1rqOcpSyKztdVbkTkUjlqhcxp65Yow44DDkZh3xGzO3HhRZLoMlHPmYGP9fef8He%2BLm8boBAAA%3D"
   }
 ]
